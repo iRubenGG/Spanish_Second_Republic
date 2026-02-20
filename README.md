@@ -1,4 +1,4 @@
-# No Pasaran! A Seoncd Spanish Republic Experience
+# No Pasaran! A Second Spanish Republic Experience
 
 ## Included Libraries
 
