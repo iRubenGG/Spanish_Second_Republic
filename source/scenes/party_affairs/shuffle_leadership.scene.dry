@@ -33,14 +33,14 @@ go-to: root
 tags: remove_advisor
 
 
-@remove_hilferding
-title: Remove Hilferding
-view-if: hilferding_advisor = 1
-on-arrival: hilferding_advisor = 0; center_dissent += 5; n_advisors -= 1
+@remove_diaz
+title: Remove Díaz
+view-if: diaz_advisor = 1
+on-arrival: diaz_advisor = 0; center_dissent += 5; n_advisors -= 1
 tags: remove_advisor
 go-to: rm_main
 
-Hilferding has been removed as an advisor. The Centrist faction disapproves.
+Díaz has been removed as an advisor. The Centrist faction disapproves.
 
 @remove_wels
 title: Remove Wels
@@ -61,14 +61,14 @@ go-to: rm_main
 Müller has been removed as an advisor. The Centrist faction disapproves.
 
 
-@remove_breitscheid
-title: Remove Breitscheid
-view-if: breitscheid_advisor = 1
+@remove_carrillo
+title: Remove Carrillo
+view-if: carrillo_advisor = 1
 tags: remove_advisor
-on-arrival: breitscheid_advisor = 0; center_dissent += 5; n_advisors -= 1
+on-arrival: carrillo_advisor = 0; center_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Breitscheid has been removed as an advisor. The Centrist faction disapproves.
+Carrillo has been removed as an advisor. The Centrist faction disapproves.
 
 # reformists
 
@@ -91,14 +91,14 @@ go-to: rm_main
 
 Braun has been removed as an advisor. The Reformist faction disapproves.
 
-@remove_juchacz
-title: Remove Juchacz
-view-if: juchacz_advisor = 1
+@remove_campoamor
+title: Remove Campoamor
+view-if: campoamor_advisor = 1
 tags: remove_advisor
-on-arrival: juchacz_advisor = 0; reformist_dissent += 5; n_advisors -= 1
+on-arrival: campoamor_advisor = 0; reformist_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Juchacz has been removed as an advisor. The Reformist faction disapproves.
+Campoamor has been removed as an advisor. The Reformist faction disapproves.
 
 @remove_pfulf
 title: Remove Pfülf
@@ -121,14 +121,14 @@ go-to: rm_main
 
 Leipart has been removed as an advisor. The Labor faction disapproves.
 
-@remove_aufhauser
-title: Remove Aufhäuser
-view-if: aufhauser_advisor = 1
+@remove_largo_caballero
+title: Remove Largo Caballero
+view-if: largo_caballero_advisor = 1
 tags: remove_advisor
-on-arrival: aufhauser_advisor = 0; labor_dissent += 5; n_advisors -= 1
+on-arrival: largo_caballero_advisor = 0; labor_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Aufhäuser has been removed as an advisor. The Labor faction disapproves.
+Largo Caballero has been removed as an advisor. The Labor faction disapproves.
 
 @remove_wissell
 title: Remove Wissell
@@ -233,26 +233,26 @@ Schumacher has been removed as an advisor. The Neorevisionist faction disapprove
 
 # tbh I'm not sure if Baade should be a reformist or nonfactional. same for stampfer. they were vaguely reformist-aligned but had pretty different ideas from the other reformists here. so they're non-factional.
 
-@remove_baade
-title: Remove Baade
-view-if: baade_advisor = 1
+@remove_prieto
+title: Remove Prieto
+view-if: prieto_advisor = 1
 tags: remove_advisor
-on-arrival: baade_advisor = 0; n_advisors -= 1
+on-arrival: prieto_advisor = 0; n_advisors -= 1
 go-to: rm_main
 
-Baade has been removed as an advisor.
+Prieto has been removed as an advisor.
 
 #The Reformist faction disapproves.
 
 
-@remove_hirschfeld
-title: Remove Hirschfeld
-view-if: hirschfeld_advisor = 1
+@remove_kent
+title: Remove Kent
+view-if: kent_advisor = 1
 tags: remove_advisor
-on-arrival: hirschfeld_advisor = 0; n_advisors -= 1
+on-arrival: kent_advisor = 0; n_advisors -= 1
 go-to: rm_main
 
-Hirschfeld has been removed as an advisor. 
+Kent has been removed as an advisor. 
 
 @remove_stampfer
 title: Remove Stampfer
@@ -263,14 +263,14 @@ go-to: rm_main
 
 Stampfer has been removed as an advisor. 
 
-@remove_radbruch
-title: Remove Radbruch
-view-if: radbruch_advisor = 1
+@remove_ibarruri
+title: Remove Ibárruri
+view-if: ibarruri_advisor = 1
 tags: remove_advisor
-on-arrival: radbruch_advisor = 0; n_advisors -= 1
+on-arrival: ibarruri_advisor = 0; n_advisors -= 1
 go-to: rm_main
 
-Radbruch has been removed as an advisor. 
+Ibárruri has been removed as an advisor. 
 
 
 
@@ -329,17 +329,17 @@ view-if: n_advisors < 3
 
 - #nonfactional_advisor
 
-@add_hilferding
-title: Rudolf Hilferding
-subtitle: Rudolf Hilferding is an economist and one of our chief Marxist theoreticians. {!<br><br>!}[? if difficulty < 0 : Actions - Against Right and Left, Defending Toleration, Fiscal Policy, Economic Democracy ?]
+@add_diaz
+title: José Díaz
+subtitle: José Díaz is the Secretary General of the PCE. {!<br><br>!}[? if difficulty < 0 : Actions - Against Right and Left, Defending Toleration, Fiscal Policy, Economic Democracy ?]
 is-card: true
-card-image: img/portraits/HilferdingRudolf.jpg
+card-image: img/portraits/DiazJose.jpg
 tags: center_advisor
-view-if: hilferding_advisor = 0 and n_advisors < 3 and centrists_resign = 0
-on-arrival: hilferding_advisor = 1; n_advisors += 1
+view-if: diaz_advisor = 0 and n_advisors < 3 and centrists_resign = 0
+on-arrival: diaz_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
-Rudolf Hilferding is now an advisor.
+José Díaz is now an advisor.
 
 @add_wels
 title: Otto Wels
@@ -365,17 +365,17 @@ go-to: advisor_menu
 
 Hermann Müller is now an advisor.
 
-@add_breitscheid
-title: Rudolf Breitscheid
-subtitle: Rudolf Breitscheid comes from a well-educated background and is one of our foreign policy leaders. {!<br><br>!}[? if difficulty < 0 : Actions - International Relations, Foreign Policy, Party Discipline ?]
+@add_carrillo
+title: Santiago Carrillo
+subtitle: Santiago Carrillo is a young leader of the PCE, focused on uniting the left. {!<br><br>!}[? if difficulty < 0 : Actions - International Relations, Foreign Policy, Party Discipline ?]
 is-card: true
-card-image: img/portraits/BreitscheidRudolf.jpg
-view-if: breitscheid_advisor = 0 and n_advisors < 3
-on-arrival: breitscheid_advisor = 1; n_advisors += 1
+card-image: img/portraits/CarrilloSantiago.jpg
+view-if: carrillo_advisor = 0 and n_advisors < 3
+on-arrival: carrillo_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: center_advisor
 
-Rudolf Breitscheid is now an advisor.
+Santiago Carrillo is now an advisor.
 
 # reformist
 
@@ -404,17 +404,17 @@ go-to: advisor_menu
 
 Otto Braun is now an advisor.
 
-@add_juchacz
-title: Marie Juchacz
-subtitle: Marie Juchacz is the founder of Worker's Welfare, a mutual-aid organization. {!<br><br>!}[? if difficulty < 0 : Actions - Emergency Fundraising, Worker's Welfare, Organizing Women ?]
+@add_campoamor
+title: Clara Campoamor
+subtitle: Clara Campoamor is a prominent feminist and republican leader. {!<br><br>!}[? if difficulty < 0 : Actions - Emergency Fundraising, Worker's Welfare, Organizing Women ?]
 is-card: true
-card-image: img/portraits/JuchaczMarie.jpg
-view-if: juchacz_advisor = 0 and n_advisors < 3
-on-arrival: juchacz_advisor = 1; n_advisors += 1; reformist_strength += 5
+card-image: img/portraits/CampoamorClara.jpg
+view-if: campoamor_advisor = 0 and n_advisors < 3
+on-arrival: campoamor_advisor = 1; n_advisors += 1; reformist_strength += 5
 go-to: advisor_menu
 tags: reformist_advisor
 
-Marie Juchacz is now an advisor.
+Clara Campoamor is now an advisor.
 
 @add_pfulf
 title: Antonie Pfülf
@@ -508,17 +508,17 @@ go-to: advisor_menu
 
 Theodor Leipart is now an advisor.
 
-@add_aufhauser
-title: Siegfried Aufhäuser
-subtitle: Siegfried Aufhäuser is the leader of the AfA-Bund, the white-collar trade union federation. {!<br><br>!}[? if difficulty < 0 : Actions - Organizing White-Collar Workers, Union-Party Coordination, Addressing the Economic Crisis ?]
+@add_largo_caballero
+title: Francisco Largo Caballero
+subtitle: Francisco Largo Caballero is the leader of the UGT, the socialist trade union federation. {!<br><br>!}[? if difficulty < 0 : Actions - Organizing White-Collar Workers, Union-Party Coordination, Addressing the Economic Crisis ?]
 is-card: true
-card-image: img/portraits/AufhäuserSiegfried.jpg
+card-image: img/portraits/LargoCaballero.jpg
 tags: labor_advisor
-view-if: aufhauser_advisor = 0 and n_advisors < 3
-on-arrival: aufhauser_advisor = 1; n_advisors += 1; labor_strength += 5
+view-if: largo_caballero_advisor = 0 and n_advisors < 3
+on-arrival: largo_caballero_advisor = 1; n_advisors += 1; labor_strength += 5
 go-to: advisor_menu
 
-Siegfried Aufhäuser is now an advisor.
+Francisco Largo Caballero is now an advisor.
 
 @add_wissell
 title: Rudolf Wissell
@@ -586,44 +586,44 @@ Julius Leber is now an advisor.
 
 # Nonfactional advisors
 
-@add_baade
-title: Fritz Baade
-subtitle: Fritz Baade is one of the few agricultural policy experts in the SPD. {!<br><br>!}[? if difficulty < 0 : Actions - Agricultural Policy, Rural Campaigning, Addressing the Economic Crisis ?]
+@add_prieto
+title: Indalecio Prieto
+subtitle: Indalecio Prieto is a prominent socialist leader with experience in government. {!<br><br>!}[? if difficulty < 0 : Actions - Agricultural Policy, Rural Campaigning, Addressing the Economic Crisis ?]
 is-card: true
-card-image: img/portraits/BaadeFritz.jpg
-view-if: baade_advisor = 0 and n_advisors < 3
-on-arrival: baade_advisor = 1; n_advisors += 1
+card-image: img/portraits/PrietoIndalecio.jpg
+view-if: prieto_advisor = 0 and n_advisors < 3
+on-arrival: prieto_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: nonfactional_advisor
 
-Fritz Baade is now an advisor.
+Indalecio Prieto is now an advisor.
 
 
-@add_hirschfeld
-title: Magnus Hirschfeld
-subtitle: Magnus Hirschfeld is the founder of the Institut für Sexualwissenschaft and an advocate for the rights of sexual minorities. {!<br><br>!}[? if difficulty < 0 : Actions - Homosexual Rights, Women's Rights, Science Funding ?]
+@add_kent
+title: Victoria Kent
+subtitle: Victoria Kent is a prominent feminist and republican. {!<br><br>!}[? if difficulty < 0 : Actions - Homosexual Rights, Women's Rights, Science Funding ?]
 is-card: true
-card-image: img/portraits/HirschfeldMagnus.jpg
-view-if: hirschfeld_advisor = 0 and n_advisors < 3
-on-arrival: hirschfeld_advisor = 1; n_advisors += 1
+card-image: img/portraits/KentVictoria.jpg
+view-if: kent_advisor = 0 and n_advisors < 3
+on-arrival: kent_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: nonfactional_advisor
 
-Magnus Hirschfeld is now an advisor.
+Victoria Kent is now an advisor.
 
 # TODO: add radbruch, stampfer
 
-@add_radbruch
-title: Gustav Radbruch
-subtitle: Gustav Radbruch is a renowned legal scholar and long-time SPD justice minister. {!<br><br>!}[? if difficulty < 0 : Actions - Judicial Affairs, Constitutional Reform ?]
+@add_ibarruri
+title: Dolores Ibárruri
+subtitle: Dolores Ibárruri is a prominent PCE leader and orator. {!<br><br>!}[? if difficulty < 0 : Actions - Judicial Affairs, Constitutional Reform ?]
 is-card: true
-card-image: img/portraits/RadbruchGustav.jpg
-view-if: radbruch_advisor = 0 and n_advisors < 3
-on-arrival: radbruch_advisor = 1; n_advisors += 1
+card-image: img/portraits/IbarruriDolores.jpg
+view-if: ibarruri_advisor = 0 and n_advisors < 3
+on-arrival: ibarruri_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: nonfactional_advisor
 
-Gustav Radbruch is now an advisor.
+Dolores Ibárruri is now an advisor.
 
 
 @add_stampfer

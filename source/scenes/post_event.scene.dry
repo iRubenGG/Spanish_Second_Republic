@@ -110,6 +110,10 @@ if (Q.month_actions >= 1) {
             Q.resources += 2;
         }
     }
+    if (Q.year == 1936 && Q.month == 12) {
+        Q.game_over = 1;
+        Q.republic_victory = 1;
+    }
     // decrement timers
     for (timer of Q.timers) {
         if (Q[timer+'_timer'] && Q[timer+'_timer'] > 0) {

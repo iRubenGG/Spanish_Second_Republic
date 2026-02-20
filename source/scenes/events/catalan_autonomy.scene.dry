@@ -1,0 +1,26 @@
+title: Catalan Autonomy
+new-page: true
+subtitle: Catalonia demands autonomy.
+tags: event
+view-if: year = 1932 and month >= 9 and catalan_autonomy_seen = 0
+on-arrival: catalan_autonomy_seen = 1
+max-visits: 1
+
+= Catalan Autonomy
+
+In September 1932, Catalonia approves its Statute of Autonomy. The Spanish government must decide how to respond.
+
+- @approve_statute: Approve the Statute of Autonomy for Catalonia.
+- @reject_statute: Reject the Statute and maintain central control.
+
+@approve_statute
+title: Approve the Statute
+on-arrival: ir_r += 5; psoe_r += 2; ceda_r -= 3; monarquicos_r -= 2; pro_republic += 5; nationalism -= 5
+
+The Statute is approved, granting Catalonia significant autonomy. This boosts support for republican parties and reduces nationalism.
+
+@reject_statute
+title: Reject the Statute
+on-arrival: ir_r -= 5; psoe_r -= 2; ceda_r += 3; monarquicos_r += 2; pro_republic -= 5; nationalism += 5; dissent += 10
+
+The Statute is rejected, leading to protests and increased centralist sentiment.

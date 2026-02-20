@@ -1,0 +1,26 @@
+title: Basque Autonomy
+new-page: true
+subtitle: The Basque Country seeks autonomy.
+tags: event
+view-if: year = 1936 and month >= 6 and basque_autonomy_seen = 0
+on-arrival: basque_autonomy_seen = 1
+max-visits: 1
+
+= Basque Autonomy
+
+In June 1936, the Basque Statute is approved. How does the government respond?
+
+- @approve_basque: Approve the Basque Statute.
+- @reject_basque: Reject it.
+
+@approve_basque
+title: Approve the Statute
+on-arrival: ir_r += 3; psoe_r += 1; ceda_r -= 2; monarquicos_r -= 1; pro_republic += 3; nationalism -= 3
+
+Autonomy is granted, strengthening regional identities and republican support.
+
+@reject_basque
+title: Reject the Statute
+on-arrival: ir_r -= 3; psoe_r -= 1; ceda_r += 2; monarquicos_r += 1; pro_republic -= 3; nationalism += 3; dissent += 5
+
+Rejection causes discontent in the Basque region.

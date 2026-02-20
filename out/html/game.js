@@ -16,7 +16,7 @@
     // Add your custom code here.
   };
 
-  var TITLE = "No Pasaran! A Seoncd Spanish Republic Experience" + '_' + "iRubenGG";
+  var TITLE = "No Pasaran! A Second Spanish Republic Experience" + '_' + "iRubenGG";
 
   // the url is a link to game.json
   // test url: https://aucchen.github.io/social_democracy_mods/v0.1.json

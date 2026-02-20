@@ -6,7 +6,7 @@ go-to: post_event if started = 1; start_menu if started = 0
 new-page: true
 go-to: start_menu_2
 
-= No Pasaran! A Seoncd Spanish Republic Experience
+= No Pasaran! A Second Spanish Republic Experience
 
 @start_menu_2
 
@@ -21,8 +21,8 @@ on-arrival: {!
 Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
-Q.year = 1928;
-Q.month = 1;
+Q.year = 1931;
+Q.month = 4;
 // how many actions have been taken this month?
 Q.month_actions = 0;
 
@@ -64,6 +64,10 @@ Q.unions_independent = 0;
 Q.centrists_resign = 0;
 Q.left_split = 0;
 Q.reformists_resigned = 0;
+Q.catalan_autonomy_seen = 0;
+Q.basque_autonomy_seen = 0;
+Q.sanjurjada_seen = 0;
+Q.asturian_revolution_seen = 0;
 
 // have we discovered neorevisionism?
 Q.neorevisionism = 0;
@@ -228,92 +232,88 @@ Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
+Q.parties = ['psoe', 'pce', 'ir', 'rr', 'prr', 'ceda', 'monarquicos', 'otros'];
 
 // TODO: add 'sapd' later on
 Q.sapd_formed = 0;
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_spd = 60;
-Q.workers_kpd = 20;
-Q.workers_z = 5;
-Q.workers_ddp = 0;
-Q.workers_dvp = 0;
-Q.workers_dnvp = 5;
-Q.workers_nsdap = 0;
-Q.workers_other = 10;
+Q.workers_psoe = 60;
+Q.workers_pce = 20;
+Q.workers_ir = 5;
+Q.workers_rr = 0;
+Q.workers_prr = 0;
+Q.workers_ceda = 5;
+Q.workers_monarquicos = 0;
+Q.workers_otros = 10;
 
-Q.old_middle_spd = 5;
-Q.old_middle_kpd = 0;
-Q.old_middle_z = 5;
-Q.old_middle_ddp= 10;
-Q.old_middle_dvp = 25;
-Q.old_middle_dnvp = 25;
-Q.old_middle_nsdap = 10;
-Q.old_middle_other = 10;
+Q.old_middle_psoe = 5;
+Q.old_middle_pce = 0;
+Q.old_middle_ir = 5;
+Q.old_middle_rr = 10;
+Q.old_middle_prr = 25;
+Q.old_middle_ceda = 25;
+Q.old_middle_monarquicos = 10;
+Q.old_middle_otros = 10;
 
-Q.new_middle_spd = 5;
-Q.new_middle_kpd = 1;
-Q.new_middle_z = 10;
-Q.new_middle_ddp= 25;
-Q.new_middle_dvp = 25;
-Q.new_middle_dnvp = 10;
-Q.new_middle_nsdap = 5;
-Q.new_middle_other = 15;
+Q.new_middle_psoe = 5;
+Q.new_middle_pce = 1;
+Q.new_middle_ir = 10;
+Q.new_middle_rr = 25;
+Q.new_middle_prr = 25;
+Q.new_middle_ceda = 10;
+Q.new_middle_monarquicos = 5;
+Q.new_middle_otros = 15;
 
-Q.rural_spd = 10;
-Q.rural_kpd = 0;
-Q.rural_z = 5;
-Q.rural_ddp= 5;
-Q.rural_dvp = 15;
-Q.rural_dnvp = 45;
-Q.rural_nsdap = 5;
-Q.rural_other = 10;
+Q.rural_psoe = 10;
+Q.rural_pce = 0;
+Q.rural_ir = 5;
+Q.rural_rr = 5;
+Q.rural_prr = 15;
+Q.rural_ceda = 45;
+Q.rural_monarquicos = 5;
+Q.rural_otros = 10;
 
-Q.unemployed_spd = 25;
-Q.unemployed_kpd = 55;
-Q.unemployed_z = 1;
-Q.unemployed_ddp = 0;
-Q.unemployed_dvp = 0;
-Q.unemployed_dnvp = 5;
-Q.unemployed_nsdap = 15;
-Q.unemployed_other = 9;
+Q.unemployed_psoe = 25;
+Q.unemployed_pce = 55;
+Q.unemployed_ir = 1;
+Q.unemployed_rr = 0;
+Q.unemployed_prr = 0;
+Q.unemployed_ceda = 5;
+Q.unemployed_monarquicos = 15;
+Q.unemployed_otros = 9;
 
-Q.catholics_spd = 15;
-Q.catholics_kpd = 2;
-Q.catholics_z = 50;
-Q.catholics_ddp = 0;
-Q.catholics_dvp = 5;
-Q.catholics_dnvp = 5;
-Q.catholics_nsdap = 0;
-Q.catholics_other = 12;
+Q.catholics_psoe = 15;
+Q.catholics_pce = 2;
+Q.catholics_ir = 50;
+Q.catholics_rr = 0;
+Q.catholics_prr = 5;
+Q.catholics_ceda = 5;
+Q.catholics_monarquicos = 0;
+Q.catholics_otros = 12;
 
 
-// Current Reichstag composition
-// % of Reichstag in Jan 1928
-// source: wikipedia
-// note: the Z figures also include the BVP (Bavarian people's party)
-// since they were ideologically similar, but they were separate parties.
-// They did not have a CDU/CSU-style relationship.
-Q.spd_r = 26;
-Q.kpd_r = 9;
-Q.z_r = 17;
-Q.ddp_r = 6;
-Q.dvp_r = 10;
-Q.dnvp_r = 20;
-Q.nsdap_r = 3;
-Q.other_r = 9;
+// Current Cortes composition
+// % of Cortes in 1931
+Q.psoe_r = 24.7;
+Q.pce_r = 3.0;
+Q.ir_r = 19.2;
+Q.rr_r = 5.5;
+Q.prr_r = 19.2;
+Q.ceda_r = 6.4;
+Q.monarquicos_r = 10.0;
+Q.otros_r = 12.0;
 
-// diff from prev
-Q.old_spd_r = 26;
-Q.old_kpd_r = 9;
-Q.old_z_r = 17;
-Q.old_ddp_r = 6;
-Q.old_dvp_r = 10;
-Q.old_dnvp_r = 20;
-Q.old_nsdap_r = 3;
-Q.old_other_r = 9;
+// diff from prev (para simulaciones)
+Q.old_psoe_r = 29.3;
+Q.old_pce_r = 3.5;
+Q.old_ir_r = 22.8;
+Q.old_rr_r = 6.6;
+Q.old_prr_r = 22.8;
+Q.old_ceda_r = 7.6;
+Q.old_monarquicos_r = 13.7;
+Q.old_otros_r = 13.7;
 
 // sapd isn't formed yet, but it may be formed
 Q.sapd_r = 0;
@@ -540,7 +540,7 @@ Q.muller_advisor = 1; // Hermann Müller
 Q.muller_dead = 0;
 // okay I know Arthur Crispien was a leader irl but i couldn't find much interesting about him...
 Q.crispien_advisor = 0; // Arthur Crispien
-Q.hilferding_advisor = 1; // Rudolf Hilferding
+Q.diaz_advisor = 1; // José Díaz
 
 // left advisors
 Q.sender_advisor = 0; // Toni Sender
@@ -551,17 +551,17 @@ Q.seydewitz_advisor = 0; // Max Seydewitz
 
 // centrist alternate advisors
 Q.pfulf_advisor = 0; // Antonie Pfülf
-Q.breitscheid_advisor = 0; // Rudolf Breitscheid
+Q.carrillo_advisor = 0; // Santiago Carrillo
 
 // Reformist advisors
 Q.severing_advisor = 0; // Carl Severing
 Q.braun_advisor = 0; // Otto Braun
-Q.juchacz_advisor = 0; // Marie Juchacz
-Q.baade_advisor = 0; // Fritz Baade
+Q.campoamor_advisor = 0; // Clara Campoamor
+Q.prieto_advisor = 0; // Indalecio Prieto
 
 // Labor advisors
 Q.leipart_advisor = 0; // Theodor Leipart
-Q.aufhauser_advisor = 0; // Siegfried Aufhäuser
+Q.largo_caballero_advisor = 0; // Francisco Largo Caballero
 Q.woytinsky_advisor = 0; // Wladimir Woytinsky (post-1930)
 Q.wissell_advisor = 0; // Rudolf Wissell
 
@@ -572,8 +572,8 @@ Q.leber_advisor = 0; // Julius Leber (post-1930)
 Q.schumacher_advisor = 0; // Kurt Schumacher (post-1930)
 
 // Nonfactional advisors
-Q.hirschfeld_advisor = 0; // Magnus Hirschfeld
-Q.radbruch_advisor = 0; // Gustav Radbruch
+Q.kent_advisor = 0; // Victoria Kent
+Q.ibarruri_advisor = 0; // Dolores Ibárruri
 Q.stampfer_advisor = 0; // Friedrich Stampfer
 !}
 set-bg: img/map_2.jpg

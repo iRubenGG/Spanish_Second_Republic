@@ -1,0 +1,26 @@
+title: Sanjurjada
+new-page: true
+subtitle: A military coup attempt by General Sanjurjo.
+tags: event
+view-if: year = 1932 and month >= 8 and sanjurjada_seen = 0
+on-arrival: sanjurjada_seen = 1
+max-visits: 1
+
+= Sanjurjada
+
+In August 1932, General José Sanjurjo leads a failed coup against the Republic. The government must respond.
+
+- @suppress_coup: Suppress the coup firmly.
+- @negotiate: Attempt to negotiate with the rebels.
+
+@suppress_coup
+title: Suppress the Coup
+on-arrival: pro_republic += 10; nationalism -= 10; reichswehr_loyalty -= 0.1; coup_progress += 2
+
+The coup is defeated, boosting republican morale but straining military relations.
+
+@negotiate
+title: Negotiate
+on-arrival: pro_republic -= 5; nationalism += 5; reichswehr_loyalty += 0.1; coup_progress -= 1
+
+Negotiation leads to some concessions, but weakens the Republic's image.

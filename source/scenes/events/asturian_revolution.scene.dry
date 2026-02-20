@@ -1,0 +1,26 @@
+title: Asturian Revolution
+new-page: true
+subtitle: Revolution breaks out in Asturias.
+tags: event
+view-if: year = 1934 and month >= 10 and asturian_revolution_seen = 0 and (ceda_r > 20 or monarquicos_r > 20)
+on-arrival: asturian_revolution_seen = 1
+max-visits: 1
+
+= Asturian Revolution
+
+In October 1934, miners in Asturias revolt against the right-wing government. How to handle it?
+
+- @support_revolution: Support the revolutionaries.
+- @suppress_revolution: Suppress the revolt.
+
+@support_revolution
+title: Support the Revolution
+on-arrival: psoe_r += 10; pce_r += 5; ir_r += 5; ceda_r -= 10; monarquicos_r -= 10; pro_republic += 15; dissent += 20
+
+Supporting the revolution boosts left-wing support but increases internal dissent.
+
+@suppress_revolution
+title: Suppress the Revolt
+on-arrival: psoe_r -= 5; pce_r -= 5; ir_r -= 5; ceda_r += 10; monarquicos_r += 10; pro_republic -= 10; nationalism += 10
+
+Suppression strengthens the right but alienates the left.

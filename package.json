@@ -1,22 +1,22 @@
 {
-  "name": " social_democracy_alternate_history",
+  "name": "spanish_second_republic_game",
   "version": "0.11.1",
-  "description": "Building the game:",
+  "description": "No Pasaran! A Second Spanish Republic Experience",
   "main": "out/html/index.html",
   "scripts": {
     "dendrynexus": "dendrynexus"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://aucchen@github.com/aucchen/social_democracy_alternate_history.git"
+    "url": "git+https://github.com/aucchen/spanish_second_republic_game.git"
   },
   "keywords": [],
   "author": "iRubenGG",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/aucchen/social_democracy_alternate_history/issues"
+    "url": "https://github.com/aucchen/spanish_second_republic_game/issues"
   },
-  "homepage": "https://github.com/aucchen/social_democracy_alternate_history",
+  "homepage": "https://github.com/aucchen/spanish_second_republic_game",
   "dependencies": {
     "dendrynexus": "github:aucchen/dendrynexus",
     "parliament-svg": "^3.0.0"
