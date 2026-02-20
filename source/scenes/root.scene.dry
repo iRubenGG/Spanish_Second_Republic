@@ -21,8 +21,8 @@ on-arrival: {!
 Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
-Q.year = 1928;
-Q.month = 1;
+Q.year = 1931;
+Q.month = 2;
 // how many actions have been taken this month?
 Q.month_actions = 0;
 
@@ -101,63 +101,76 @@ Q.moderate_plan_adopted = 0;
 // organizations
 
 // inter-party relations
+Q.ceda_relation = 50; // CEDA relations
+Q.pce_relation = 25; // PCE relations
+Q.ir_relation = 60; // Izquierda Republicana relations
+Q.radical_relation = 35; // Radical relations
+// Monarchists and Falange are invariably hostile
+Q.monarchist_relation = 10;
+Q.falange_relation = 0;
+
+Q.pce_leader = "Díaz"; // José Díaz
+// alternative is the Conciliators as party leader
+Q.pce_party_leader = "Díaz";
+Q.ceda_leader = "Gil Robles";
+// party leader
+Q.ceda_party_leader = "Alcalá-Zamora";
+Q.falange_leader = "Primo de Rivera"; // José Antonio Primo de Rivera
+
+// Keep old variables for backward compatibility
 Q.z_relation = 50;
+Q.z_leader = "Gil Robles";
+Q.z_party_leader = "Alcalá-Zamora";
 Q.kpd_relation = 25;
+Q.kpd_leader = "Díaz";
+Q.kpd_party_leader = "Díaz";
 Q.ddp_relation = 60;
 Q.dvp_relation = 35;
-// DNVP and NSDAP are invariably hostile
 Q.DNVP_relation = 10;
 Q.NSDAP_relation = 0;
+Q.nsdap_leader = "Primo de Rivera";
 
-Q.kpd_leader = "Thälmann";
-// alternative is the Conciliators as party leader
-Q.kpd_party_leader = "Thälmann";
-Q.z_leader = "Brüning";
-// party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1928 December conference. Joos will be most friendly to the SPD.
-Q.z_party_leader = "Marx";
-Q.nsdap_leader = "Hitler";
-
-// hmm... maybe we can play nice with Hindenburg???
-Q.hindenburg_relation = 25;
-// whether or not hindenburg can dismiss the government.
+// Relations with the President
+Q.hindenburg_relation = 25; // Alcalá-Zamora relation
+// whether or not president can dismiss the government.
 Q.hindenburg_enabled = 0;
 
 
-// Does the SPD lead in Prussia?
-Q.spd_prussia = 1;
-// Options: spd, z, dnvp, papen, nsdap
-Q.prussian_government = "SPD";
+// Does the PSOE lead in Catalonia?
+Q.spd_prussia = 1; // PSOE in Catalonia
+// Options: psoe, ir, monarchist, falange, ceda
+Q.prussian_government = "PSOE"; // Catalan government
 
-// The array of forces - paramilitary groups
-// Number of members in 1928 (in thousands)
-// Reichsbanner, stahlhelm, SA, rotfrontkämpferbund
-Q.rb_strength = 2000;
+// The array of forces - paramilitary groups and militias
+// Numbers in 1931 (estimated in thousands)
+// UGT militia, CEDA-Renovación Spanish militia, Falange, PSOE/UGT weapons groups
+Q.rb_strength = 400; // UGT/PSOE militia (Milicias Obreras)
 Q.rb_militancy = 0.01;
 Q.women_in_rb = 0;
 Q.rb_banned = 0;
-Q.sh_strength = 500;
+Q.sh_strength = 100; // CEDA/Renovación militia
 Q.sh_militancy = 0.5;
 Q.sh_banned = 0;
-Q.sh_banned_prussia = 0;
-Q.sa_strength = 80;
+Q.sh_banned_prussia = 0; // Catalan ban
+Q.sa_strength = 30; // Falange militia
 Q.sa_militancy = 0.5;
 Q.sa_banned = 0;
 Q.sa_banned_prussia = 0;
-Q.rfb_strength = 130;
+Q.rfb_strength = 50; // Communist militia
 Q.rfb_militancy = 0.5;
 Q.rfb_banned = 0;
 Q.rfb_banned_prussia = 0;
 
-Q.interior_police_strength = 50;
+Q.interior_police_strength = 30; // Civil Guard (Guardia Civil) - Interior
 Q.interior_police_militancy = 1;
 Q.interior_police_loyalty = 0.45;
 
-Q.prussian_police_strength = 90;
+Q.prussian_police_strength = 50; // Assault Guard (Guardia de Asalto) - Regional
 Q.prussian_police_militancy = 1;
 Q.prussian_police_loyalty = 0.5;
 
 // strength includes actual military and de facto reserves?
-Q.reichswehr_strength = 100;
+Q.reichswehr_strength = 80; // Spanish Army (Ejército Español)
 Q.reichswehr_militancy = 5;
 Q.reichswehr_loyalty = 0.2;
 
@@ -228,99 +241,95 @@ Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
+Q.parties = ['psoe', 'pce', 'ceda', 'ir', 'radical', 'monarchist', 'falange', 'other'];
 
 // TODO: add 'sapd' later on
 Q.sapd_formed = 0;
 
 // Support for party by social group
-// they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_spd = 60;
-Q.workers_kpd = 20;
-Q.workers_z = 5;
-Q.workers_ddp = 0;
-Q.workers_dvp = 0;
-Q.workers_dnvp = 5;
-Q.workers_nsdap = 0;
-Q.workers_other = 10;
+// Spanish 1931 elections data (approximate)
+Q.workers_psoe = 50; // PSOE - Socialists
+Q.workers_pce = 5; // PCE - Very small in 1931
+Q.workers_ceda = 5; // CEDA/Centro
+Q.workers_ir = 15; // Izquierda Republicana
+Q.workers_radical = 5; // Radicales
+Q.workers_monarchist = 5; // Monarchists
+Q.workers_falange = 0;
+Q.workers_other = 15;
 
-Q.old_middle_spd = 5;
-Q.old_middle_kpd = 0;
-Q.old_middle_z = 5;
-Q.old_middle_ddp= 10;
-Q.old_middle_dvp = 25;
-Q.old_middle_dnvp = 25;
-Q.old_middle_nsdap = 10;
-Q.old_middle_other = 10;
+Q.old_middle_psoe = 5;
+Q.old_middle_pce = 0;
+Q.old_middle_ceda = 10;
+Q.old_middle_ir = 10;
+Q.old_middle_radical = 20;
+Q.old_middle_monarchist = 20;
+Q.old_middle_falange = 5;
+Q.old_middle_other = 30;
 
-Q.new_middle_spd = 5;
-Q.new_middle_kpd = 1;
-Q.new_middle_z = 10;
-Q.new_middle_ddp= 25;
-Q.new_middle_dvp = 25;
-Q.new_middle_dnvp = 10;
-Q.new_middle_nsdap = 5;
-Q.new_middle_other = 15;
+Q.new_middle_psoe = 3;
+Q.new_middle_pce = 1;
+Q.new_middle_ceda = 15;
+Q.new_middle_ir = 20;
+Q.new_middle_radical = 20;
+Q.new_middle_monarchist = 5;
+Q.new_middle_falange = 2;
+Q.new_middle_other = 34;
 
-Q.rural_spd = 10;
-Q.rural_kpd = 0;
-Q.rural_z = 5;
-Q.rural_ddp= 5;
-Q.rural_dvp = 15;
-Q.rural_dnvp = 45;
-Q.rural_nsdap = 5;
-Q.rural_other = 10;
+Q.rural_psoe = 8;
+Q.rural_pce = 0;
+Q.rural_ceda = 10;
+Q.rural_ir = 8;
+Q.rural_radical = 10;
+Q.rural_monarchist = 40;
+Q.rural_falange = 2;
+Q.rural_other = 22;
 
-Q.unemployed_spd = 25;
-Q.unemployed_kpd = 55;
-Q.unemployed_z = 1;
-Q.unemployed_ddp = 0;
-Q.unemployed_dvp = 0;
-Q.unemployed_dnvp = 5;
-Q.unemployed_nsdap = 15;
-Q.unemployed_other = 9;
+Q.unemployed_psoe = 30;
+Q.unemployed_pce = 15;
+Q.unemployed_ceda = 2;
+Q.unemployed_ir = 10;
+Q.unemployed_radical = 5;
+Q.unemployed_monarchist = 2;
+Q.unemployed_falange = 8;
+Q.unemployed_other = 28;
 
-Q.catholics_spd = 15;
-Q.catholics_kpd = 2;
-Q.catholics_z = 50;
-Q.catholics_ddp = 0;
-Q.catholics_dvp = 5;
-Q.catholics_dnvp = 5;
-Q.catholics_nsdap = 0;
-Q.catholics_other = 12;
+Q.catholics_psoe = 10;
+Q.catholics_pce = 1;
+Q.catholics_ceda = 40;
+Q.catholics_ir = 10;
+Q.catholics_radical = 15;
+Q.catholics_monarchist = 15;
+Q.catholics_falange = 0;
+Q.catholics_other = 9;
 
 
-// Current Reichstag composition
-// % of Reichstag in Jan 1928
-// source: wikipedia
-// note: the Z figures also include the BVP (Bavarian people's party)
-// since they were ideologically similar, but they were separate parties.
-// They did not have a CDU/CSU-style relationship.
-Q.spd_r = 26;
-Q.kpd_r = 9;
-Q.z_r = 17;
-Q.ddp_r = 6;
-Q.dvp_r = 10;
-Q.dnvp_r = 20;
-Q.nsdap_r = 3;
-Q.other_r = 9;
+// Current Congress composition 
+// Estimated from 1931 Spanish elections
+Q.psoe_r = 23; // PSOE
+Q.pce_r = 0; // PCE was very small in 1931
+Q.ceda_r = 10; // Centro-derecha (Acción Popular/Radical)
+Q.ir_r = 15; // Izquierda Republicana and Radicales
+Q.radical_r = 15; // Radicales Independientes
+Q.monarchist_r = 12; // Tradicionalistas and Monarchists
+Q.falange_r = 2; // Falange (very new)
+Q.other_r = 23;
 
 // diff from prev
-Q.old_spd_r = 26;
-Q.old_kpd_r = 9;
-Q.old_z_r = 17;
-Q.old_ddp_r = 6;
-Q.old_dvp_r = 10;
-Q.old_dnvp_r = 20;
-Q.old_nsdap_r = 3;
-Q.old_other_r = 9;
+Q.old_psoe_r = 23;
+Q.old_pce_r = 0;
+Q.old_ceda_r = 10;
+Q.old_ir_r = 15;
+Q.old_radical_r = 15;
+Q.old_monarchist_r = 12;
+Q.old_falange_r = 2;
+Q.old_other_r = 23;
 
 // sapd isn't formed yet, but it may be formed
 Q.sapd_r = 0;
 Q.old_sapd_r = 0;
 
 // for changing the DDP's name to the DStP
-Q.ddp_name = "DDP";
+Q.ddp_name = "IR"; // Izquierda Republicana
 
 // array of objects of the form {date: Date(), spd: 10, kpd: 12, ...} for each election
 Q.election_records = [];
@@ -331,17 +340,17 @@ Q.economic_records = [];
 
 
 // State of the government
-Q.president = "Hindenburg";
-// starting chancellor: Wilhelm Marx
-Q.chancellor = "Marx";
-Q.chancellor_party = 'Z';
-Q.spd_in_government = 0;
-Q.z_in_government = 1;
-Q.ddp_in_government = 0;
-Q.dvp_in_government = 1;
-Q.dnvp_in_government = 1;
-Q.kpd_in_government = 0;
-Q.nsdap_in_government = 0;
+Q.president = "Alcalá-Zamora";
+// starting chancellor: Azaña
+Q.chancellor = "Azaña";
+Q.chancellor_party = 'IR';
+Q.spd_in_government = 0; // PSOE
+Q.z_in_government = 0; // CEDA
+Q.ddp_in_government = 1; // Izquierda Republicana
+Q.dvp_in_government = 0; // Radical
+Q.dnvp_in_government = 0; // Monarchist
+Q.kpd_in_government = 0; // PCE
+Q.nsdap_in_government = 0; // Falange
 
 Q.in_right_coalition = 0;
 // Weimar coalition = SPD + Z + DDP
@@ -373,24 +382,23 @@ Q.spd_toleration = 0;
 Q.minority_government = 0;
 
 // ministries - which parties control the ministries?
-// starting with the 4th Marx cabinet https://en.wikipedia.org/wiki/Fourth_Marx_cabinet
-// is the agricultural ministry useful at all?
-Q.foreign_minister = 'Streseman';
-Q.foreign_minister_party = 'DVP';
-Q.interior_minister = 'von Keudell';
-Q.interior_minister_party = 'DNVP';
-Q.justice_minister = 'Hergt';
-Q.justice_minister_party = 'DNVP';
-Q.labor_minister = 'Brauns';
-Q.labor_minister_party = 'Z';
-Q.reichswehr_minister = 'Groener';
-Q.reichswehr_minister_party = 'I';
-Q.economic_minister = 'Curtius';
-Q.economic_minister_party = 'DVP';
-Q.finance_minister = 'Köhler';
-Q.finance_minister_party = 'Z';
-Q.agriculture_minister = 'Schiele';
-Q.agriculture_minister_party = 'DNVP';
+// starting with the Azaña government of 1931
+Q.foreign_minister = 'Madariaga';
+Q.foreign_minister_party = 'IR';
+Q.interior_minister = 'Maura';
+Q.interior_minister_party = 'IR';
+Q.justice_minister = 'García Prieto';
+Q.justice_minister_party = 'IR';
+Q.labor_minister = 'Largo Caballero';
+Q.labor_minister_party = 'PSOE';
+Q.military_minister = 'Azaña';
+Q.military_minister_party = 'IR';
+Q.economic_minister = 'Gómez Moreno';
+Q.economic_minister_party = 'IR';
+Q.finance_minister = 'Feced';
+Q.finance_minister_party = 'IR';
+Q.agriculture_minister = 'Marrangu';
+Q.agriculture_minister_party = 'IR';
 
 // Events: what has occurred?
 Q.panzerkreuzer_seen = 0;
@@ -502,10 +510,10 @@ Q.peoples_party_timer = 0;
 Q.n_elections = 0;
 // number of elections without a clear majority.
 Q.no_majority_elections = 0;
-// elections are not on a timer, but rather there is an indicator for whether you're in an electoral cycle.
+// are we in an electoral cycle?
 Q.in_election = 1;
-Q.next_election_year = 1928;
-Q.next_election_month = 5;
+Q.next_election_year = 1931;
+Q.next_election_month = 6;
 Q.next_election_time = 5;
 // government affairs timers
 Q.agricultural_policy_timer = 0;
@@ -535,12 +543,12 @@ Q.march_on_berlin_timer = 0;
 
 
 // all the initial advisors are centrists.
-Q.wels_advisor = 1; // Otto Wels
-Q.muller_advisor = 1; // Hermann Müller
+Q.wels_advisor = 1; // Julián Besteiro (equivalent to Wels)
+Q.muller_advisor = 1; // Manuel Azaña
 Q.muller_dead = 0;
-// okay I know Arthur Crispien was a leader irl but i couldn't find much interesting about him...
-Q.crispien_advisor = 0; // Arthur Crispien
-Q.hilferding_advisor = 1; // Rudolf Hilferding
+// Francisco Largo Caballero
+Q.crispien_advisor = 0; // Equivalent would be Araquistáin
+Q.hilferding_advisor = 1; // Indalecio Prieto
 
 // left advisors
 Q.sender_advisor = 0; // Toni Sender
@@ -625,10 +633,12 @@ audio: shuffle music/1928_1930/FruhlingsliedMendelssohn.mp3 music/1928_1930/AUF_
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
-= 1928
+= 1931
 
-It is a bright time for German democracy. After a period of struggle, inflation is finally under control, and the economy is expanding steadily. In foreign policy, we have reached agreements with the Western powers and the Soviet Union that might make genuine peace a reality. 
+It is February, 1931. The Second Spanish Republic is still young. The elections of June 1931 have just transformed Spain into a republic after decades of monarchy. The hopes of the Spanish left are high, but reactionary forces remain powerful and dangerous.
 
-Now, the task of Social Democracy is to prepare for the next election. The bourgeois-right government of Wilhelm Marx is unpopular, and we stand to gain. Perhaps the next government will have a socialist majority.
+Now, the task of the Socialist Party is to first prove that the Republic can deliver progress and stability. The bourgeois governments that preceded have proved weak. Perhaps the next government will have a socialist majority and truly transform Spain.
+
+
 
 
