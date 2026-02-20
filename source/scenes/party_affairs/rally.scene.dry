@@ -9,11 +9,11 @@ go-to: main_rally; sa_disrupt if sa_strength > 180 and not sa_banned and not ret
 
 @sa_disrupt
 
-The Nazi SA has disrupted our rally! Their street troops are preventing us from meeting.
+The Falange has disrupted our rally! Their paramilitary units are preventing us from meeting.
 
-- @police_protect: Call the police to protect our rally.
-- @rb_protect: Use the Reichsbanner to protect our rally.
-- @both_protect: The police and Reichsbanner should work together to protect our rally.
+- @police_protect: Call the Civil Guard to protect our rally.
+- @rb_protect: Use the Workers' Militias to protect our rally.
+- @both_protect: The Civil Guard and Workers' Militias should work together to protect our rally.
 - @cancel: Cancel the rally.
 
 @police_protect
@@ -24,12 +24,12 @@ go-to: police_protect_win if police_protect_success >= 0; police_protect_lose if
 @police_protect_win
 go-to: main_rally
 
-The police successfully protected our rally, so it can go ahead as usual.
+The Civil Guard successfully protected our rally, so it can go ahead as usual.
 
 @police_protect_lose
-on-arrival: strife += 1; workers_nsdap += 3
+on-arrival: strife += 1; workers_falange += 3
 
-Unfortunately, the police were unable or unwilling to hold back the SA mob. The Nazis have won this show of strength.
+Unfortunately, the Civil Guard were unable or unwilling to hold back the Falange mob. The fascists have won this show of strength.
 
 @rb_protect
 on-arrival: rb_success = rb_strength*rb_militancy - sa_strength*sa_militancy; strife += 1
@@ -38,35 +38,35 @@ go-to: rb_protect_win if rb_success >= 0; rb_protect_lose if rb_success < 0
 @rb_protect_win
 go-to: main_rally
 
-The Reichsbanner has successfully protected our rally against the SA! Our meeting can go ahead as usual.
+The Workers' Militias have successfully protected our rally against the Falange! Our meeting can go ahead as usual.
 
 @rb_protect_lose
-on-arrival: workers_nsdap += 3; rb_strength -= 50
+on-arrival: workers_falange += 3; rb_strength -= 50
 
-Unfortunately, the Reichsbanner was not able to hold back the SA mob. The Nazis have won this show of strength.
+Unfortunately, the Workers' Militias were not able to hold back the Falange mob. The fascists have won this show of strength.
 
 @both_protect
 view-if: spd_prussia
 choose-if: prussian_police_training > 0
-unavailable-subtitle: The loyal sections of the police have never coordinated with the Reichsbanner before.
+unavailable-subtitle: The loyal sections of the Civil Guard have never coordinated with the Workers' Militias before.
 on-arrival: rb_success = rb_strength*rb_militancy - sa_strength*sa_militancy + prussian_police_loyalty*prussian_police_militancy*prussian_police_strength*2; strife += 1
 go-to: both_protect_win if rb_success >= 0; both_protect_lose if rb_success < 0
 
 @both_protect_win
 go-to: main_rally
 
-The police and Reichsbanner have successfully protected our rally against the SA! Our meeting can go ahead as usual.
+The Civil Guard and Workers' Militias have successfully protected our rally against the Falange! Our meeting can go ahead as usual.
 
 @both_protect_lose
-on-arrival: workers_nsdap += 3; rb_strength -= 50
+on-arrival: workers_falange += 3; rb_strength -= 50
 
-Unfortunately, the police and Reichsbanner were not able to hold back the SA mob. The Nazis have won this show of strength.
+Unfortunately, the Civil Guard and Workers' Militias were not able to hold back the Falange mob. The fascists have won this show of strength.
 
 
 @cancel
-on-arrival: workers_nsdap += 3;
+on-arrival: workers_falange += 3;
 
-The SA have won this show of strength.
+The Falange have won this show of strength.
 
 @main_rally
 

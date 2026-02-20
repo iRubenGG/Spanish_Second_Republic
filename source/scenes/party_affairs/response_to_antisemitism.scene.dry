@@ -1,4 +1,4 @@
-title: Confronting Antisemitism
+title: Confronting Antisemitism and Fascist Violence
 new-page: true
 is-card: true
 view-if: iron_front_formed == 1 and nazi_urgency >= 3
@@ -7,23 +7,23 @@ card-image: img/iron_front.png
 tags: party_affairs, antifascism
 max-visits: 1
 
-= Confronting Antisemitism
+= Confronting Antisemitism and Fascist Violence
 
-Antisemitism has long been a latent feature of German society, but since the beginning of the economic depression, it has grown to a horrifying extent. The Nazis are the worst of it, but all the right-wing parties are deeply antisemitic. Regarding the SPD specifically, our right-wing enemies love to deploy their racist rhetoric against our many Jewish comrades, magnifying criticism of any minor transgression, and they call the entire SPD a Jewish party. We are a favorite target of their invectives.
+The Falange and right-wing reactionaries in our country have long deployed hateful rhetoric against minorities and supposed enemies of Spain. Since the beginning of the economic depression, such attacks have grown to a horrifying extent. The Falange are the worst of it, but all the right-wing parties are deeply reactionary. Regarding the PSOE specifically, our right-wing enemies love to deploy their hateful rhetoric against our supporters, magnifying criticism of any minor transgression, and they call the entire PSOE a menace to Spain. We are a favorite target of their invectives.
 
-- @socialism_of_fools: Antisemitism is the "socialism of fools". We will defeat them with real socialism.
-- @if: Antisemitism is a crisis. Direct the full force of the Iron Front against antisemitism.
-- @all: All Germans will suffer from fascism, not just the Jews. We do not need a separate policy for them.
+- @socialism_of_fools: We will defeat them with real social progress and economic security.
+- @if: Such hatred is a crisis. Direct the full force of Unios Hermanos Proletarios against fascist violence.
+- @all: Republicans of all backgrounds will suffer from fascism, not just particular minorities. We do not need a separate policy.
 
 @socialism_of_fools
 
-The best policy to deal with this sort of irrational, senseless hatred is to ignore it. Few are swayed by racist rhetoric; the best way to combat it is to provide economic security so that people do not turn to antisemitism.
+The best policy to deal with this sort of irrational, senseless hatred is to ignore it and provide economic security. Few are swayed by hateful rhetoric alone; the best way to combat it is to demonstrate that democracy and socialism can improve people's lives.
 
 @if
-on-arrival: confronting_antisemitism += 2; sa_strength -= 20; democratization += 1; pacifism += 1; nationalism -= 5*(1-dissent); workers_nsdap -= 6*(1-dissent);
+on-arrival: confronting_antisemitism += 2; sa_strength -= 20; democratization += 1; pacifism += 1; nationalism -= 5*(1-dissent); workers_falange -= 6*(1-dissent);
 
-We develop an entire campaign against antisemitism under the auspices of the Iron Front. Hopefully our campaign can sway the workers away from Nazism.
+We develop an entire campaign against fascist violence under the auspices of Unios Hermanos Proletarios. Hopefully our campaign can sway the workers away from fascism.
 
 @all
 
-We do not need any special treatment for minorities.
+We do not need any special policy addressing this issue.
