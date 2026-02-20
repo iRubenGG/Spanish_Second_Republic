@@ -402,9 +402,9 @@ The KPD has taken an abstentionist position with regards to ministries. They cla
 @popular_front_civil_war
 on-arrival: kpd_relation = 80; reichswehr_loyalty += 0.25;
 
-In response to the KPD's entrance into the government, the right-wing immediately launches a coup attempt. Troops of the Stahlhelm and Nazi SA enter Berlin and immediately begin clashing with our supporters! Reactionary officers within the Reichswehr have taken their troops out of the barracks and joined them with the Stahlhelm to stop us from taking power.
+In response to the PCE's entrance into the government, the right-wing immediately launches a coup attempt. Troops of the Requetés and Falange enter Madrid and immediately begin clashing with our supporters! Reactionary military officers have taken their troops out of the barracks and joined them with the Requetés to stop us from taking power.
 
-The Center manages to diffuse some of the hostility from the Reichswehr and the Stahlhelm, but fail to prevent the outbreak of fighting. We are forced to fight on the same side as the KPD, whether we want to or not.
+The centrist parties manage to diffuse some of the hostility from the military and the Requetés, but fail to prevent the outbreak of fighting. We are forced to fight on the same side as the PCE, whether we want to or not.
 
 - @civil_war: A civil war, then.
 
@@ -486,7 +486,7 @@ With great reluctance, President [+ president +] appoints [+ chancellor +] as ch
 
 Immediately, [+ chancellor +] goes to work building a "Soviet Germany": consolidating as much power as possible in the KPD, purging state institutions of anti-communists, and sending street fighters against the "enemies of the people".
 
-In response to [+ chancellor +] being appointed Chancellor, the right-wing forces launches almost immediately launch an attempted coup. Troops of the Stahlhelm and Nazi SA enter Berlin and immediately begin clashing with our supporters! Reactionary officers within the Reichswehr have taken their troops out of the barracks and joined them with the Stahlhelm to stop the KPD from taking power. We are forced to be on the same side as the KPD, whether we want to or not.
+In response to [+ chancellor +] being appointed Chancellor, the right-wing immediately launches an attempted coup. Troops of the Requetés and Falange enter Madrid and immediately begin clashing with our supporters! Reactionary military officers have taken their troops out of the barracks and joined them with the Requetés to stop the PCE from taking power. We are forced to be on the same side as the PCE, whether we want to or not.
 
 - @civil_war
 
@@ -527,7 +527,7 @@ Whatever their reasoning is, the SPD has control over the ministries of governme
 @left_coalition_civil_war
 on-arrival: reichswehr_loyalty += 0.1
 
-In response to the KPD's entrance into the government, the right-wing immediately launches a coup attempt. Troops of the Stahlhelm and Nazi SA enter Berlin and begin clashing with our supporters. Reactionary officers within the Reichswehr have taken their troops out of the barracks and joined them with the Stahlhelm to stop us from taking power.
+In response to the PCE's entrance into the government, the right-wing immediately launches a coup attempt. Troops of the Requetés and Falange enter Madrid and begin clashing with our supporters. Reactionary military officers have taken their troops out of the barracks and joined them with the Requetés to stop us from taking power.
 
 - @civil_war: A civil war, then.
 
@@ -848,7 +848,7 @@ on-arrival: sh_strength += 150; sa_strength += 150; sh_militancy += 0.05; sa_mil
 
 The far-right parties, seeing that we are willing to deny them government by questionably democratic means, have decided that they can only take power by undemocratic means, and have risen up in force against the sitting government.
 
-Their numbers are bolstered by the many government workers who are against the prospect of a unified Socialist government. Police and soldiers defect to the SA and Stahlhelm.
+Their numbers are bolstered by the many government workers who are against the prospect of a unified Socialist government. Police and soldiers defect to the Falange and Requetés.
 
 - @civil_war: It is war.
 

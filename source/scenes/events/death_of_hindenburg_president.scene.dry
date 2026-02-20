@@ -26,7 +26,7 @@ go-to: candidate_menu
 [? if hitler_deported : With Hitler deported, the Nazis will be running Hermann Göring as their candidate. ?]
 This might be the Nazis' last hurrah; the party's internal contradictions are heightening, and it is in desperate shortage of funds.
 
-The DNVP will nominate Franz Seldte, leader of the Stahlhelm paramilitary group. He will be endorsed by many of Hindenburg's most right-wing supporters. They are working more closely with the Nazis than before, and in the second round, the far-right parties are expected to consolidate into a single anti-republican front.
+The conservative right will nominate a leader of the Requetés paramilitary group. He will be endorsed by many of right-wing supporters. They are working more closely with the Falange than before, and in the second round, the far-right parties are expected to consolidate into a single anti-republican front.
 
 [? if kpd_party_leader = "Conciliators" : Given the failure of Thälmann's previous runs for president, and his declining stature in the party, the KPD will be running Willi Münzenberg, a controversial figure sometimes called the "Red millionaire". He is a media magnate who leads a number of Communist front organizations. ?]
 [? if kpd_party_leader != "Conciliators" : This will be Ernst Thälmann's third run for president as leader of the KPD. Despite his previous electoral defeats, he retains the loyalty of the party as well as Stalin's Soviet Union. ?]
@@ -76,7 +76,7 @@ go-to: r1_menu
 
 We have endorsed Konrad Adenauer of the Center Party.
 
-[? if z_relation < 40 : With our support of Adenauer, some of the most conservative parts of the Bavarian People's Party have broken away from the Center Party, shifting their support to the Stahlhelm leader Seldte. ?]
+[? if z_relation < 40 : With our support of our centrist allies, some of the most conservative monarchists have broken away, shifting their support to the Requet\u00e9s leader. ?]
 
 @gessler_r1
 on-arrival: spd_candidate = "Gessler"; ddp_relation += 4; dvp_candidate = "Seldte" if dvp_relation < 40; is_unity_candidate = 1
@@ -377,7 +377,7 @@ on-arrival: {!
 var candidate_descs = {
 Hitler: "Adolf Hitler of the NSDAP",
 Goring: "Hermann Göring of the NSDAP",
-Seldte: "Franz Seldte of the Stahlhelm/DNVP",
+Royalist: "Leader of the Requetés/Monarchist",
 Eckener: "the independent republican candidate Hugo Eckener",
 Adenauer: "Konrad Adenauer of the Center Party",
 Gessler: "Otto Gessler, independent formerly of the DDP",
@@ -573,7 +573,7 @@ go-to: r2_campaigning
 
 We have endorsed Konrad Adenauer of the Center Party.
 
-[? if z_relation < 40 : With our support of Adenauer, some of the most conservative parts of the Bavarian People's Party have broken away from the Center Party, shifting their support to the Stahlhelm leader Seldte. ?]
+[? if z_relation < 40 : With our support of our centrist allies, some of the most conservative monarchists have broken away, shifting their support to the Requet\u00e9s leader. ?]
 
 [? if kpd_candidate = spd_candidate: The KPD is now breaking from our previous coalition and supporting their own candidate. ?]
 

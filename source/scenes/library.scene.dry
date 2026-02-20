@@ -248,13 +248,13 @@ Strength: [+ rb_strength +] thousand
 
 Militarization: [+ rb_militancy : militancy +]
 
-**Rotfrontkämpferbund (RFB)**: The "Red Front Fighter's League" is associated with the KPD.
+**Milicias Antifascistas Obreras y Campesinas (MAOC)**: The communist paramilitary militia associated with the PCE.
 
 Strength: [+ rfb_strength +] thousand
 
 Militarization: [+ rfb_militancy : militancy +]
 
-**Der Stahlhelm**: A right-wing nationalist organization of primarily Great War veterans, descended from the *Freikorps* that emerged after the war. Associated with the DNVP.
+**Los Requetés**: A right-wing monarchist organization primarily composed of Carlist traditionalists, advocating for the restoration of the monarchy. Associated with the Monarchists.
 
 Strength: [+ sh_strength +] thousand
 

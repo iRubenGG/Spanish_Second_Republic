@@ -17,7 +17,7 @@ We must do something to protect the workers against these predations.
 - @if_training: Train union members to fight as part of Unios Hermanos Proletarios.
 - @prussian_police_training: Use the Civil Guard to help train the Workers' Militias.
 - @peace: Try to avoid all militant confrontations, as much as possible.
-- @truce_rfb: Try to make peace with the Communist militias.
+- @truce_rfb: Try to make peace with the Communist militias (MAOC).
 - @easy_discard
 
 @battle
@@ -62,4 +62,4 @@ view-if: kpd_truce == 0
 unavailable-subtitle: The PCE is not interested.
 on-arrival: kpd_truce = 1; pce_relation += 5; rfb_strength += 50; rb_strength += 50; sa_strength += 50;
 
-We have made at least a temporary truce with the PCE, so that our respective militias will stop fighting.
+We have made at least a temporary truce with the PCE and their militia, the MAOC, so that our respective militias will stop fighting.

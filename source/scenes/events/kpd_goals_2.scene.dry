@@ -20,6 +20,6 @@ The KPD presents us with a new list of goals for the coalition:
 
 [? if foreign_goal = 1 : - Improve our relations with the Soviet Union. ?]
 
-#[? if interior_goal = 1 : - Ban the SA and Stahlhelm. ?]
+#[? if interior_goal = 1 : - Ban the Falange and Requetés. ?]
 
 They say that they expect to see these goals fulfilled in [+ kpd_ultimatum_timer +] months. Otherwise, they will vote to dissolve the coalition.

@@ -6,9 +6,9 @@ view-if: year = 1929 and month = 5
 max-visits: 1
 face-image: img/redfront.jpg
 
-= May Day, 1929
+= May Day, 1931
 
-Tensions run high in Berlin. The Communists are planning a demonstration to commemorate the 10th anniversary of the Spartacist Uprising. No one has forgotten that it was our party members who ordered the uprising's suppression, and the Communists still blame us for the deaths of Rosa Luxemburg and Karl Liebknecht.
+Tensions run high in Madrid. The Communists are planning a demonstration to commemorate worker solidarity. No one has forgotten the tensions between our party and the PCE, and many fear the possibility of violent confrontations.
 
 Many non-communists are afraid of the possibility of another violent uprising, and our allies in the Prussian coalition are asking the Prussian Interior Ministry to ban the demonstrations.
 
@@ -39,7 +39,7 @@ This assuages some of the Communists' outrage, but certainly not all.
 @communist_fault
 on-arrival: kpd_relation -= 10; z_relation += 5; dvp_relation += 5; rfb_strength -= 80; rfb_banned = 1
 
-If the KPD continues to act illegally, they must suffer the consequences. Thus, we have banned the RFKB, their paramilitary group. The bourgeois and right-leaning parties approve.
+If the PCE continues to act illegally, they must suffer the consequences. Thus, we have banned the MAOC, their paramilitary militia. The bourgeois and right-leaning parties approve.
 
 @no_fault
 

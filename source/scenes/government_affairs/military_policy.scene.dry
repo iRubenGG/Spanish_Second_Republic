@@ -34,7 +34,7 @@ on-arrival: budget += 1; coalition_dissent += 1 if in_grand_coalition == 1; dvp_
 
 The military has fewer guns and fewer soldiers. There is no hint of a coup yet, but we do not know where the line will be drawn. The center-right parties are committed to the military and deeply opposed to our budget cuts.
 
-Many demobilized soldiers have joined the right-wing paramilitaries such as the Stahlhelm and SA, and weapons are missing from our stockpiles.
+Many demobilized soldiers have joined the right-wing paramilitaries such as the Requetés and Falange, and weapons are missing from our stockpiles.
 
 @reform
 subtitle: -1 budget

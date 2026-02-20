@@ -20,7 +20,7 @@ The KPD presents us with a list of goals for the coalition:
 
 [? if foreign_goal = 1 : - Improve our relations with the Soviet Union. ?]
 
-#[? if interior_goal = 1 : - Ban the SA and Stahlhelm. ?]
+#[? if interior_goal = 1 : - Ban the Falange and Requetés. ?]
 
 [? if reichswehr_goal = 1 : - Reduce funding for the Reichswehr. ?]
 

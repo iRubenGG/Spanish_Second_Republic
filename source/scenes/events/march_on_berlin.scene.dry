@@ -9,7 +9,7 @@ tags: event
 
 = March on Berlin
 
-The far right is mobilizing. Paramilitary forces of the Stahlhelm and SA, organized under the Harzburg Front, have marched on Berlin, threatening to violently overthrow the government.
+The far right is mobilizing. Paramilitary forces of the Requetés and Falange have marched on Madrid, threatening to violently overthrow the government.
 
 They demand either immediate elections under the "supervision" of the nationalist paramilitaries, or else the immediate resignation of the government and the appointment of Adolf Hitler as chancellor[? if hitler_deported : , and the revocation of his deportation ?]. It is obvious that they are threatening a civil war if their demands are not met.
 
@@ -47,7 +47,7 @@ President [+ president +] has asked our government to resign.
 
 # TODO: if Hindenburg is president, he will always ask the govt to resign. If the SPD refuses, this causes a constitutional crisis. If there is a constitutional crisis, then if judicial reform >= 4, then the courts intervene against Hindenburg and preserves the government.
 
-# if Reichsbanner + Prussian Police >= SA + Stahlhelm, then the fascists retreat.
+# if Workers' Militias + Civil Guard >= Falange + Requetés, then the fascists retreat.
 
 @govt_menu
 
