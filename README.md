@@ -1,4 +1,4 @@
-# Social Democracy: An Alternate History
+# No Pasaran! A Seoncd Spanish Republic Experience
 
 ## Included Libraries
 
