@@ -9,7 +9,7 @@ tags: event
 
 = Schleicher's Schemes
 
-Chancellor Kurt von Schleicher claims to have a plan to save Germany, and he has reached out to the Social Democrats with vague promises. He claims that in order to govern, the Reichstag must be temporarily suspended to prevent the Nazis and Communists from disrupting government, in effect giving him and Hindenburg dictatorial powers. In the meantime, he is enacting a public works program and job creation plan, which he claims will stabilize the economy, 
+The Prime Minister claims to have a plan to save Spain, and he has reached out to the Social Democrats with vague promises. He claims that in order to govern, the Congreso de los Diputados must be temporarily suspended to prevent the Communists and Monarchists from disrupting government, in effect giving him and the President dictatorial powers. In the meantime, he is enacting a public works program and job creation plan, which he claims will stabilize the economy, 
 
 [? if works_program <= 0: The trade unions are somewhat favorable to Schleicher's plan, as they see a commonality between Schleicher's economic plan and the ADGB's WTB-plan for debt-funded job creation. However, the rest of our party is vehemently against Schleicher. ?]
 
@@ -48,15 +48,15 @@ call: set_next_election_time
 
 # hack to set next election time
 
-The scheme has succeeded - there is a majority in the Reichstag backing Schleicher. New elections have been tentatively set for [+ next_election_month : month +] [+ next_election_year +].
+The scheme has succeeded - there is a majority in the Congreso de los Diputados backing this government. New elections have been tentatively set for [+ next_election_month : month +] [+ next_election_year +].
 
 @schleicher_failed
 
-Unfortunately, the coalition supporting the dissolution of the Reichstag does not constitute a majority. There will be elections as scheduled.
+Unfortunately, the coalition supporting the dissolution of the Congreso de los Diputados does not constitute a majority. There will be elections as scheduled.
 
 @reject
 title: Reject Schleicher's schemes.
-subtitle: The Reichstag will continue to meet.
+subtitle: The Congreso de los Diputados will continue to meet.
 on-arrival: labor_dissent += 10 if works_program = 0
 
 In the end, there is no uptake for Schleicher's schemes by any political party.

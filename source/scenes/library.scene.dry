@@ -23,11 +23,11 @@ Herein contains relevant information about the government and politics of the Ge
 @government
 go-to: menu
 
-The German Republic, called by some of our detractors as the "Weimar Republic", is a parliamentary republic with a somewhat weak president and a strong parliament, called the Reichstag. The Reichstag is responsible for governing, while the President has a largely ceremonial role but also has some important governing responsibilities.
+The Spanish Second Republic is a parliamentary republic with a somewhat weak president and a strong parliament, called the Congreso de los Diputados. The Congreso de los Diputados is responsible for governing, while the President has a largely ceremonial role but also has some important governing responsibilities.
 
-The Reichstag is elected based on a proportional representation system, giving parties seats roughly proportional to their vote share in each electoral district. The Reichstag then elects the Chancellor and the cabinet by a majority vote, who are responsible for government. A majority vote-of-no-confidence can remove the current government.
+The Congreso de los Diputados is elected based on a proportional representation system, giving parties seats roughly proportional to their vote share in each electoral district. The Congreso de los Diputados then elects the Prime Minister and the cabinet by a majority vote, who are responsible for government. A majority vote-of-no-confidence can remove the current government.
 
-The President is elected by a national direct vote, in two rounds. The second round is used if the first round does not result in a majority for one candidate; the candidate who receives a plurality in the second round becomes president (there is no obligation for weaker candidates to drop out). The role of the president is mostly to represent Germany, but he also has some crucial governing powers. The president and chancellor can together use emergency decrees to govern, bypassing the Reichstag. The president can also appoint or remove a chancellor when a parliamentary majority is unable to be established, and can thus influence the formation of a government.
+The President is elected by a national direct vote, in two rounds. The second round is used if the first round does not result in a majority for one candidate; the candidate who receives a plurality in the second round becomes president (there is no obligation for weaker candidates to drop out). The role of the president is mostly to represent Spain, but he also has some crucial governing powers. The president and prime minister can together use emergency decrees to govern, bypassing the Congreso de los Diputados. The president can also appoint or remove a prime minister when a parliamentary majority is unable to be established, and can thus influence the formation of a government.
 
 Germany is divided into a number of states, each of which have their own governments with some responsibilities. By far the largest and most important state is Prussia.
 
@@ -69,7 +69,7 @@ President: [+ president +]
 
 Chancellor: [+ chancellor +] ([+ chancellor_party +])
 
-Reichstag composition:
+Congreso de los Diputados composition:
 
 # 1931: 23, 1933: 16, 1936: 16
 PSOE: [+ spd_r +]%
@@ -407,13 +407,13 @@ if (d3 && window) {
     if (screenWidth < width - 50) {
         width = screenWidth - 50;
         height = width;
-        document.getElementById("reichstag").style.height = screenWidth/2 + "px";
+        document.getElementById("congreso").style.height = screenWidth/2 + "px";
     }
     var parliament = d3.parliament();
     parliament.width(width).height(height).innerRadiusCoef(0.4);
     parliament.enter.fromCenter(true).smallToBig(true);
     parliament.exit.toCenter(false).bigToSmall(true);
-    d3.select("#reichstag").datum(data).call(parliament);
+    d3.select("#congreso").datum(data).call(parliament);
 
     var lines = d3.linegraph(false, false,
             Q.parties,
@@ -448,9 +448,9 @@ if (d3 && window) {
 }
 !}
 
-= Reichstag composition
+= Congreso de los Diputados composition
 
-{!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
+{!<svg id="congreso" style="width: 500px; height: 250px;"> </svg>!}
 
 {!<table>!}
 {!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div></td><td>!} **PSOE:** {!</td><td>!} **[+ spd_r +]%** {!</td></tr>!}

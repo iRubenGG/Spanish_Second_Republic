@@ -1,4 +1,4 @@
-title: Reichstag Elections
+title: Congressional Elections
 new-page: true
 tags: event
 priority: -1
@@ -13,7 +13,7 @@ face-image: img/Rothe_Wahlen_1903.jpg
 
 = Elections, [+ month : month +] [+ year +]
 
-The Reichstag elections are to be held now.
+The Congreso de los Diputados elections are to be held now.
 
 - @election_algorithm: May we do our best...
 - @cancel_elections
@@ -257,21 +257,21 @@ if (window && d3) {
     if (screenWidth < width - 50) {
         width = screenWidth - 50; 
         height = width;
-        document.getElementById("reichstag").style.height = screenWidth/2 + "px";
+        document.getElementById("congreso").style.height = screenWidth/2 + "px";
     } 
 
     var parliament = d3.parliament();
     parliament.width(width).height(height).innerRadiusCoef(0.4);
     parliament.enter.fromCenter(true).smallToBig(true);
     parliament.exit.toCenter(false).bigToSmall(true);
-    d3.select("#reichstag").datum(data).call(parliament);
+    d3.select("#congreso").datum(data).call(parliament);
 }
 !}
 go-to: coalition_menu
 
 = Election results
 
-{!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
+{!<svg id="congreso" style="width: 500px; height: 250px;"> </svg>!}
 
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
@@ -308,7 +308,7 @@ Right-wing Coalition (Z + BVP + DVP + Others + DNVP): [+ right_coalition +]%
 
 [? if nazi_urgency <= 1 and nsdap_r >= 15 : The rapid rise in NSDAP votes is extremely worrying. Many had believed that the party was moribund; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
 
-[? if anti_democratic_coalition >= 50 : Together, the anti-democratic KPD, DNVP, and NSDAP have a majority in the Reichstag. A stable governing majority will be almost impossible. ?]
+[? if anti_democratic_coalition >= 50 : Together, the anti-democratic PCE, Monarchists, and Falange have a majority in the Congreso de los Diputados. A stable governing majority will be almost impossible. ?]
 
 There are some potential coalition arrangements.
 
@@ -430,9 +430,9 @@ on-arrival: chancellor = nsdap_leader; chancellor_party = "NSDAP"
 @far_right_fail
 on-arrival: chancellor = "Schleicher"; chancellor_party = "I"; pro_republic -= 10; next_election_time = time+5; next_election_month = month + 5; next_election_year = year; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12;
 
-The reactionary establishment is still very skeptical of the Nazis, so instead, [+ president +] appoints Kurt von Schleicher, a former general, as chancellor, to try to "tame" the Nazis.
+The reactionary establishment is still very skeptical of the right-wing parties, so instead, [+ president +] appoints a former military officer as prime minister, to try to maintain order.
 
-Schleicher's government is deeply unpopular among all parties of the Reichstag. Despite his support for a coalition with the NSDAP, the Nazis want power all to themselves, without Schleicher.
+This government is deeply unpopular among all parties of the Congreso de los Diputados. The various factions want power all to themselves.
 
 New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
 

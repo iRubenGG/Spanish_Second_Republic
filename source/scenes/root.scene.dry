@@ -22,7 +22,7 @@ Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
 Q.year = 1931;
-Q.month = 2;
+Q.month = 7;
 // how many actions have been taken this month?
 Q.month_actions = 0;
 
@@ -305,7 +305,7 @@ Q.catholics_other = 9;
 
 // Current Congress composition 
 // Estimated from 1931 Spanish elections
-Q.psoe_r = 23; // PSOE
+Q.psoe_r = 24; // PSOE (23.6% in June 1931 elections)
 Q.pce_r = 0; // PCE was very small in 1931
 Q.ceda_r = 10; // Centro-derecha (Acción Popular/Radical)
 Q.ir_r = 15; // Izquierda Republicana and Radicales
