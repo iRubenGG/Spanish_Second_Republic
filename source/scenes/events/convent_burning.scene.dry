@@ -1,0 +1,31 @@
+title: Burning of Convents
+subtitle: Radical anticlerical actions have erupted across Spain.
+view-if: year == 1931 and convent_burning == 0
+new-page: true
+on-arrival: convent_burning = 1; catholics_ceda += 5; catholics_monarquicos += 5; pro_republic -= 10; left_dissent -= 5
+tags: event
+
+= Burning of Convents
+
+In May 1931, following the proclamation of the Republic, radical anticlerical groups have set fire to several convents and churches in Madrid and other cities. This has inflamed passions among Catholics and conservatives, who see it as an attack on their faith.
+
+The government must respond to this crisis.
+
+- @condemn: Strongly condemn the actions and promise justice.
+- @tolerate: Allow the actions as expressions of popular sentiment.
+- @reform: Use this as an opportunity to push for church-state separation reforms.
+
+@condemn
+on-arrival: catholics_ceda -= 3; catholics_monarquicos -= 3; pro_republic += 5; left_dissent += 5
+
+The government condemns the violence, restoring some faith in the Republic among moderates.
+
+@tolerate
+on-arrival: catholics_ceda += 10; catholics_monarquicos += 10; pro_republic -= 15; right_dissent += 10
+
+Tolerating the violence alienates Catholics and strengthens the right.
+
+@reform
+on-arrival: catholics_ceda += 5; catholics_monarquicos += 5; pro_republic += 5; church_influence -= 10
+
+Pushing for reforms reduces church influence but angers conservatives.

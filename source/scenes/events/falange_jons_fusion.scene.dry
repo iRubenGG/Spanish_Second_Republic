@@ -1,0 +1,23 @@
+title: Falange-JONS Fusion
+subtitle: Two fascist groups unite.
+view-if: year == 1934 and falange_emerged == 1 and jons_emerged == 1 and falange_jons_fusion == 0
+new-page: true
+on-arrival: falange_jons_fusion = 1; falange_strength += 5; right_dissent += 10
+tags: event
+
+= Falange-JONS Fusion
+
+Falange Española and JONS have merged into Falange Española de las JONS, strengthening the fascist movement.
+
+- @respond: Respond to the threat.
+- @ignore: Let it be.
+
+@respond
+on-arrival: falange_strength -= 5; right_dissent += 5
+
+Action weakens them.
+
+@ignore
+on-arrival: falange_strength += 10
+
+They grow stronger.

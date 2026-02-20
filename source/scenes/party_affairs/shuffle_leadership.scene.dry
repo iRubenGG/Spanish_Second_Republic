@@ -365,19 +365,7 @@ go-to: advisor_menu
 
 Hermann Müller is now an advisor.
 
-@add_carrillo
-title: Santiago Carrillo
-subtitle: Santiago Carrillo is a young leader of the PCE, focused on uniting the left. {!<br><br>!}[? if difficulty < 0 : Actions - International Relations, Foreign Policy, Party Discipline ?]
-is-card: true
-card-image: img/portraits/CarrilloSantiago.jpg
-view-if: carrillo_advisor = 0 and n_advisors < 3
-on-arrival: carrillo_advisor = 1; n_advisors += 1
-go-to: advisor_menu
-tags: center_advisor
 
-Santiago Carrillo is now an advisor.
-
-# reformist
 
 
 @add_severing
@@ -404,19 +392,7 @@ go-to: advisor_menu
 
 Otto Braun is now an advisor.
 
-@add_campoamor
-title: Clara Campoamor
-subtitle: Clara Campoamor is a prominent feminist and republican leader. {!<br><br>!}[? if difficulty < 0 : Actions - Emergency Fundraising, Worker's Welfare, Organizing Women ?]
-is-card: true
-card-image: img/portraits/CampoamorClara.jpg
-view-if: campoamor_advisor = 0 and n_advisors < 3
-on-arrival: campoamor_advisor = 1; n_advisors += 1; reformist_strength += 5
-go-to: advisor_menu
-tags: reformist_advisor
 
-Clara Campoamor is now an advisor.
-
-@add_pfulf
 title: Antonie Pfülf
 subtitle: Antonie Pfülf is a leader in social policy and women's rights. {!<br><br>!}[? if difficulty < 0 : Actions - Support a People's Party, Women's Rights ?]
 is-card: true
@@ -432,65 +408,65 @@ Antonie Pfülf is now an advisor.
 
 # left
 
-@add_levi
-title: Paul Levi
-subtitle: Paul Levi is a former KPD leader who was purged for criticizing Communist policies. {!<br><br>!}[? if difficulty < 0 : Actions - Building the Left, Cooperation with the KPD ?]
+@add_ibarruri
+title: Dolores Ibárruri
+subtitle: Dolores Ibárruri, known as "La Pasionaria", is a prominent PCE leader and advocate for workers' rights. {!<br><br>!}[? if difficulty < 0 : Actions - Building the Left, Cooperation with the PCE ?]
 is-card: true
-card-image: img/portraits/LeviPaul.jpg
-view-if: levi_advisor = 0 and levi_dead = 0 and n_advisors < 3 and left_split = 0
-on-arrival: levi_advisor = 1; n_advisors += 1; left_strength += 5
+card-image: img/portraits/IbarruriDolores.jpg
+view-if: ibarruri_advisor = 0 and ibarruri_dead = 0 and n_advisors < 3 and left_split = 0
+on-arrival: ibarruri_advisor = 1; n_advisors += 1; left_strength += 5
 go-to: advisor_menu
 tags: left_advisor
 
-Paul Levi is now an advisor.
+Dolores Ibárruri is now an advisor.
 
-@add_sender
-title: Toni Sender
-subtitle: Toni Sender is an anti-war and womens' rights advocate, and Reichstag member. {!<br><br>!}[? if difficulty < 0 : Actions - Left-Center Unity, Organizing Women, Against Toleration, Addressing the Economic Crisis ?]
+@add_prieto
+title: Indalecio Prieto
+subtitle: Indalecio Prieto is a prominent PSOE leader and advocate for social reforms. {!<br><br>!}[? if difficulty < 0 : Actions - Left-Center Unity, Organizing Workers, Addressing the Economic Crisis ?]
 is-card: true
-card-image: img/portraits/SenderToni.jpg
-view-if: sender_advisor = 0 and n_advisors < 3
-on-arrival: sender_advisor = 1; n_advisors += 1; left_strength += 5
+card-image: img/portraits/PrietoIndalecio.jpg
+view-if: prieto_advisor = 0 and n_advisors < 3
+on-arrival: prieto_advisor = 1; n_advisors += 1; left_strength += 5
 go-to: advisor_menu
 tags: left_advisor
 
-Toni Sender is now an advisor.
+Indalecio Prieto is now an advisor.
 
-@add_rosenfeld
-title: Kurt Rosenfeld
-subtitle: Kurt Rosenfeld is a lawyer, anti-militarist activist, and Reichstag member. {!<br><br>!}[? if difficulty < 0 : Actions - Building the Left, Cooperation with the KPD, Against Toleration ?]
+@add_carrillo
+title: Santiago Carrillo
+subtitle: Santiago Carrillo is a young PCE leader and advocate for youth mobilization. {!<br><br>!}[? if difficulty < 0 : Actions - Building the Left, Cooperation with the PCE, Youth Organization ?]
 is-card: true
-card-image: img/portraits/RosenfeldKurt.jpg
-view-if: rosenfeld_advisor = 0 and n_advisors < 3 and left_split = 0
-on-arrival: rosenfeld_advisor = 1; n_advisors += 1; left_strength += 5
+card-image: img/portraits/CarrilloSantiago.jpg
+view-if: carrillo_advisor = 0 and n_advisors < 3 and left_split = 0
+on-arrival: carrillo_advisor = 1; n_advisors += 1; left_strength += 5
 go-to: advisor_menu
 tags: left_advisor
 
-Kurt Rosenfeld is now an advisor.
+Santiago Carrillo is now an advisor.
 
-@add_seydewitz
-title: Max Seydewitz
-subtitle: Max Seydewitz is a former leader of the youth wing, current supporter of the left wing of the SPD, and advocates for class struggle. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Class Struggle, Socialist Youth, Against Toleration ?]
+@add_kent
+title: Victoria Kent
+subtitle: Victoria Kent is a lawyer and advocate for women's rights and prison reform. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Women's Rights, Prison Reform, Against Toleration ?]
 is-card: true
-card-image: img/portraits/SeydewitzMax.jpg
-view-if: seydewitz_advisor = 0 and n_advisors < 3 and left_split = 0
-on-arrival: seydewitz_advisor = 1; n_advisors += 1; left_strength += 5
+card-image: img/portraits/KentVictoria.jpg
+view-if: kent_advisor = 0 and n_advisors < 3 and left_split = 0
+on-arrival: kent_advisor = 1; n_advisors += 1; left_strength += 5
 go-to: advisor_menu
 tags: left_advisor
 
-Max Seydewitz is now an advisor.
+Victoria Kent is now an advisor.
 
-@add_siemsen
-title: Anna Siemsen
-subtitle: Anna Siemsen is an and educational reform advocate and pacifist, who was one of the few German women to receive a PhD in the pre-war period. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Pacifism, Educational Curriculum, Educational Structure ?]
+@add_campoamor
+title: Clara Campoamor
+subtitle: Clara Campoamor is a lawyer and advocate for women's suffrage and gender equality. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Women's Suffrage, Gender Equality, Educational Reform ?]
 is-card: true
-card-image: img/portraits/SiemsenAnna.jpg
-view-if: siemsen_advisor = 0 and n_advisors < 3 and left_split = 0
-on-arrival: siemsen_advisor = 1; n_advisors += 1; left_strength += 5
+card-image: img/portraits/CampoamorClara.jpg
+view-if: campoamor_advisor = 0 and n_advisors < 3 and left_split = 0
+on-arrival: campoamor_advisor = 1; n_advisors += 1; left_strength += 5
 go-to: advisor_menu
 tags: left_advisor
 
-Anna Siemsen is now an advisor.
+Clara Campoamor is now an advisor.
 
 
 
@@ -586,45 +562,7 @@ Julius Leber is now an advisor.
 
 # Nonfactional advisors
 
-@add_prieto
-title: Indalecio Prieto
-subtitle: Indalecio Prieto is a prominent socialist leader with experience in government. {!<br><br>!}[? if difficulty < 0 : Actions - Agricultural Policy, Rural Campaigning, Addressing the Economic Crisis ?]
-is-card: true
-card-image: img/portraits/PrietoIndalecio.jpg
-view-if: prieto_advisor = 0 and n_advisors < 3
-on-arrival: prieto_advisor = 1; n_advisors += 1
-go-to: advisor_menu
-tags: nonfactional_advisor
-
-Indalecio Prieto is now an advisor.
-
-
-@add_kent
-title: Victoria Kent
-subtitle: Victoria Kent is a prominent feminist and republican. {!<br><br>!}[? if difficulty < 0 : Actions - Homosexual Rights, Women's Rights, Science Funding ?]
-is-card: true
-card-image: img/portraits/KentVictoria.jpg
-view-if: kent_advisor = 0 and n_advisors < 3
-on-arrival: kent_advisor = 1; n_advisors += 1
-go-to: advisor_menu
-tags: nonfactional_advisor
-
-Victoria Kent is now an advisor.
-
 # TODO: add radbruch, stampfer
-
-@add_ibarruri
-title: Dolores Ibárruri
-subtitle: Dolores Ibárruri is a prominent PCE leader and orator. {!<br><br>!}[? if difficulty < 0 : Actions - Judicial Affairs, Constitutional Reform ?]
-is-card: true
-card-image: img/portraits/IbarruriDolores.jpg
-view-if: ibarruri_advisor = 0 and n_advisors < 3
-on-arrival: ibarruri_advisor = 1; n_advisors += 1
-go-to: advisor_menu
-tags: nonfactional_advisor
-
-Dolores Ibárruri is now an advisor.
-
 
 @add_stampfer
 title: Friedrich Stampfer

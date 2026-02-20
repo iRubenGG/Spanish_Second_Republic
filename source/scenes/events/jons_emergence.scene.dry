@@ -1,0 +1,23 @@
+title: Emergence of JONS
+subtitle: Another radical right group appears.
+view-if: year >= 1931 and year <= 1932 and jons_emerged == 0
+new-page: true
+on-arrival: jons_emerged = 1; jons_strength = 5; right_dissent += 3
+tags: event
+
+= Emergence of JONS
+
+Juntas de Ofensiva Nacional-Sindicalista (JONS) has emerged, a small fascist group.
+
+- @monitor: Monitor it.
+- @ban: Ban it immediately.
+
+@monitor
+on-arrival: jons_strength += 3
+
+It grows.
+
+@ban
+on-arrival: jons_strength = 0; right_dissent += 5
+
+Banning angers radicals.

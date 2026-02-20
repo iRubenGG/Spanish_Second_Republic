@@ -1,0 +1,58 @@
+title: French Alliance Proposal
+subtitle: The Foreign Ministry seeks closer ties to France...
+new-page: true
+on-arrival: french_alliance_seen = 1
+tags: event
+view-if: year = 1931 and month >= 3 and foreign_minister_party != "PSOE" and foreign_minister_party != "PCE" and french_alliance == 0
+max-visits: 1
+
+# TODO: this should happen regardless of the current state of the government...
+
+= French Alliance Proposal
+
+[? if psoe_in_government: The [+ foreign_minister_party +] foreign minister has a proposal for an alliance with France. We can either accept or reject this agreement. ?]
+[? if not psoe_in_government: The government of President [+ president +] has a proposal for an alliance with France. Most likely, this will happen whatever we decide. ?]
+
+
+The left has long sought closer ties with France, a fellow republic. An alliance with France could provide economic and military support.
+
+However, conservative factions, especially monarchists, are likely to object. This agreement could alienate traditional allies and lead to domestic unrest.
+
+- @accept: Accept the alliance.
+- @reject: Reject it to maintain neutrality.
+- @oppose: Oppose it strongly.
+
+@accept
+on-arrival: french_alliance = 1; france_relation += 10; international_support += 5
+
+The alliance has been formed. France welcomes the move, improving our international standing.
+
+@reject
+view-if: psoe_in_government = 1
+on-arrival: coalition_dissent += 1; prr_relation -= 5; rr_relation -= 4
+
+We reject the alliance to maintain neutrality.
+
+@oppose
+on-arrival: france_relation -= 10; right_dissent += 10
+
+We strongly oppose the alliance, alienating France and angering the right.
+
+
+@end_toleration
+view-if: spd_toleration = 1
+subtitle: This is difficult; all of the right-of-center parties support this policy.
+go-to: end_toleration_success if spd_r + kpd_r + ddp_r >= 50; end_toleration_fail if spd_r + kpd_r + ddp_r < 50
+
+@end_toleration_success
+on-arrival: time_to_election = 3; spd_in_government = 0; in_grand_coalition = 0; spd_toleration = 0;
+call: set_next_election_time
+
+With the support of the KPD and [+ ddp_name +], we have successfully stopped the formation of the customs union. This results in the fall of the [+ chancellor +] government.
+
+New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+
+@end_toleration_fail
+on-arrival: banking_crisis_timer = 2; customs_union = 1; west_relation -= 2; east_relation -= 2
+
+Unfortunately, the far-right parties united with the government to outvote us. The customs union will be formed.

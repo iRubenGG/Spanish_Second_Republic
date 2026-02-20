@@ -1,0 +1,23 @@
+title: Women's Suffrage
+subtitle: The constitution debate includes women's voting rights.
+view-if: year == 1931 and womens_suffrage == 0
+new-page: true
+on-arrival: womens_suffrage = 1
+tags: event
+
+= Women's Suffrage
+
+Clara Campoamor argues passionately for women's suffrage in the constituent assembly. Should women be granted the vote?
+
+- @approve: Approve women's suffrage.
+- @reject: Reject it to maintain traditional values.
+
+@approve
+on-arrival: women_support += 10; pro_republic += 5; catholics_ceda -= 5; catholics_monarquicos -= 5
+
+Granting suffrage empowers women and moderates.
+
+@reject
+on-arrival: women_support -= 10; pro_republic -= 5; left_dissent += 5
+
+Rejecting it angers progressives.

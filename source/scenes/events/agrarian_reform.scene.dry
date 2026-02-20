@@ -1,0 +1,29 @@
+title: Agrarian Reform
+subtitle: The issue of land redistribution is heating up.
+view-if: year >= 1932 and agrarian_reform == 0
+new-page: true
+on-arrival: agrarian_reform = 1
+tags: event
+
+= Agrarian Reform
+
+The agrarian question is central to Spanish politics. Large landowners dominate the south, while peasants suffer. The Republic must decide on land reform.
+
+- @implement: Implement comprehensive land redistribution.
+- @moderate: Moderate reforms to avoid alienating landowners.
+- @delay: Delay reforms to maintain stability.
+
+@implement
+on-arrival: rural_psoe += 10; rural_pce += 5; rural_ceda -= 10; rural_monarquicos -= 10; economic_growth -= 0.5; budget -= 5
+
+Radical reform boosts left support in rural areas but hurts economy and angers conservatives.
+
+@moderate
+on-arrival: rural_psoe += 5; rural_ceda += 5; economic_growth -= 0.2
+
+Moderate reforms balance interests.
+
+@delay
+on-arrival: rural_psoe -= 5; rural_pce -= 5; rural_ceda += 5; rural_monarquicos += 5
+
+Delaying pleases conservatives but disappoints the left.

@@ -72,19 +72,19 @@ Q.asturian_revolution_seen = 0;
 // have we discovered neorevisionism?
 Q.neorevisionism = 0;
 
-// crisis_urgency indicates how seriously the SPD is taking the economic crisis - scale from 0 to 10.
+// crisis_urgency indicates how seriously the PSOE is taking the economic crisis - scale from 0 to 10.
 Q.crisis_urgency = 0;
-// nazi_urgency indicates how seriously the SPD takes the nazis - scale from 0 to 10.
-Q.nazi_urgency = 0;
-// radicalization indicates how radical the SPD's rhetoric is - scale from 0 to 10.
+// falange_urgency indicates how seriously the PSOE takes the falange - scale from 0 to 10.
+Q.falange_urgency = 0;
+// radicalization indicates how radical the PSOE's rhetoric is - scale from 0 to 10.
 Q.radicalization = 0;
 // Support for the WTB plan and proto-Keynesian works creation plans in general
 Q.wtb_support = 0;
-// Support for Pacifism within the SPD relative to 1928
+// Support for Pacifism within the PSOE relative to 1931
 Q.pacifism = 0;
-// Support for democratic reform within the SPD relative to 1928
+// Support for democratic reform within the PSOE relative to 1931
 Q.democratization = 0;
-// Support for a communist coalition relative to 1928
+// Support for a communist coalition relative to 1931
 Q.communist_coalition = 0;
 // economic_plan: have we adopted *any* economic plan?
 // 1 - WTB plan, 2 - AfA-bund plan, 3 - radical plan (mass nationalization of industries)
@@ -105,49 +105,54 @@ Q.moderate_plan_adopted = 0;
 // organizations
 
 // inter-party relations
-Q.z_relation = 50;
-Q.kpd_relation = 25;
-Q.ddp_relation = 60;
-Q.dvp_relation = 35;
-// DNVP and NSDAP are invariably hostile
-Q.DNVP_relation = 10;
-Q.NSDAP_relation = 0;
+Q.rr_relation = 50;
+Q.pce_relation = 25;
+Q.ir_relation = 60;
+Q.prr_relation = 35;
+// Monárquicos and Falange are invariably hostile initially
+Q.monarquicos_relation = 10;
+Q.falange_relation = 0;
 
-Q.kpd_leader = "Thälmann";
-// alternative is the Conciliators as party leader
-Q.kpd_party_leader = "Thälmann";
-Q.z_leader = "Brüning";
-// party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1928 December conference. Joos will be most friendly to the SPD.
-Q.z_party_leader = "Marx";
-Q.nsdap_leader = "Hitler";
+Q.pce_leader = "Ibárruri";
+// alternative PCE leaders if needed
+Q.pce_party_leader = "Ibárruri";
+Q.rr_leader = "Azaña";
+// party leader for IR - can be Manuel Azaña or others
+Q.ir_party_leader = "Azaña";
+Q.falange_leader = "Primo de Rivera";
 
-// hmm... maybe we can play nice with Hindenburg???
-Q.hindenburg_relation = 25;
-// whether or not hindenburg can dismiss the government.
-Q.hindenburg_enabled = 0;
+// hmm... maybe we can play nice with Alcalá-Zamora???
+Q.alcala_zamora_relation = 25;
+// whether or not Alcalá-Zamora can dismiss the government.
+Q.alcala_zamora_enabled = 0;
 
-
-// Does the SPD lead in Prussia?
-Q.spd_prussia = 1;
-// Options: spd, z, dnvp, papen, nsdap
-Q.prussian_government = "SPD";
+// Does the PSOE lead in Catalonia?
+Q.psoe_catalonia = 1;
+// Options: psoe, rr, prr, ceda, monarquicos
+Q.catalan_government = "PSOE";
 
 // The array of forces - paramilitary groups
-// Number of members in 1928 (in thousands)
-// Reichsbanner, stahlhelm, SA, rotfrontkämpferbund
-Q.rb_strength = 2000;
-Q.rb_militancy = 0.01;
-Q.women_in_rb = 0;
-Q.rb_banned = 0;
-Q.sh_strength = 500;
-Q.sh_militancy = 0.5;
-Q.sh_banned = 0;
-Q.sh_banned_prussia = 0;
-Q.sa_strength = 80;
-Q.sa_militancy = 0.5;
-Q.sa_banned = 0;
-Q.sa_banned_prussia = 0;
-Q.rfb_strength = 130;
+// Number of members in 1931 (in thousands)
+// CNT, FAI, Falange, Guardia Civil, etc.
+Q.cnt_strength = 1000;
+Q.cnt_militancy = 0.5;
+Q.fai_strength = 30;
+Q.fai_militancy = 0.8;
+Q.falange_strength = 5;
+Q.falange_militancy = 0.7;
+Q.guardia_civil_strength = 2000;
+Q.guardia_civil_militancy = 0.1;
+
+// New variables for Spanish historical elements
+Q.france_relation = 50; // Relations with France
+Q.colonial_debate = 0; // Intensity of colonial debate
+Q.convent_burning = 0; // Has the convent burning happened?
+Q.agrarian_reform = 0; // Level of agrarian reform implemented
+Q.womens_suffrage = 0; // Women's suffrage in constitution
+Q.falange_emerged = 0; // Has Falange emerged?
+Q.jons_emerged = 0; // Has JONS emerged?
+Q.falange_jons_fusion = 0; // Have they fused?
+Q.italian_influence = 0; // Italian interference level
 Q.rfb_militancy = 0.5;
 Q.rfb_banned = 0;
 Q.rfb_banned_prussia = 0;

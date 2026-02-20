@@ -1,0 +1,29 @@
+title: Emergence of Falange
+subtitle: A new fascist party rises.
+view-if: year == 1933 and falange_emerged == 0
+new-page: true
+on-arrival: falange_emerged = 1; falange_strength = 10; right_dissent += 5
+tags: event
+
+= Emergence of Falange
+
+José Antonio Primo de Rivera has founded Falange Española, a fascist party inspired by Mussolini, advocating for authoritarianism and national revival.
+
+- @ignore: Ignore the new party.
+- @suppress: Suppress it.
+- @engage: Engage with it diplomatically.
+
+@ignore
+on-arrival: falange_strength += 5
+
+It grows unchecked.
+
+@suppress
+on-arrival: falange_strength -= 5; right_dissent += 10
+
+Suppression angers the right.
+
+@engage
+on-arrival: falange_relation += 20; monarquicos_relation -= 5
+
+Engagement improves relations but alienates monarchists.

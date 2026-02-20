@@ -1,0 +1,29 @@
+title: Colonial Debate
+subtitle: The future of Spanish colonies in Africa.
+view-if: year >= 1931 and colonial_debate == 0
+new-page: true
+on-arrival: colonial_debate = 1
+tags: event
+
+= Colonial Debate
+
+Spain's colonies in Morocco and Ifni are a burden and a source of pride. What to do?
+
+- @maintain: Maintain the empire.
+- @reform: Reform colonial administration.
+- @abandon: Abandon colonies.
+
+@maintain
+on-arrival: military_spending += 5; national_pride += 5; budget -= 5
+
+Costs money but boosts pride.
+
+@reform
+on-arrival: international_support += 5; colonial_tensions -= 10
+
+Reforms improve image.
+
+@abandon
+on-arrival: budget += 5; national_pride -= 10; right_dissent += 10
+
+Saves money but angers nationalists.

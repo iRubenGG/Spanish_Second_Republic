@@ -22,8 +22,7 @@ on-arrival: neorevisionist_strength += 10; nazi_urgency += 1; neorevisionism = 1
 
 We support the new leaders, and start using new-style propaganda techniques in our campaigns. The results are uncertain so far...
 
-- @shuffle_leadership: We should use this opportunity to change the party's leadership.
-- @root: Continue...
+- @root: We should use this opportunity to change the party's leadership.
 
 
 @no_new_ideas

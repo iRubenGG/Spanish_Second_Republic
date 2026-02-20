@@ -1,0 +1,29 @@
+title: Italian Influence
+subtitle: Foreign powers intervene.
+view-if: year == 1936 and italian_influence == 0
+new-page: true
+on-arrival: italian_influence = 1; falange_strength += 10; military_support += 5; international_tensions += 10
+tags: event
+
+= Italian Influence
+
+Mussolini is providing support to Spanish right-wing groups, including Falange, in preparation for potential conflict.
+
+- @protest: Protest the interference.
+- @accept: Accept the support.
+- @negotiate: Negotiate with Italy.
+
+@protest
+on-arrival: italian_influence -= 5; international_support += 5
+
+Protest improves international standing.
+
+@accept
+on-arrival: italian_influence += 10; right_strength += 5
+
+Acceptance boosts the right.
+
+@negotiate
+on-arrival: italian_influence += 5; international_tensions -= 5
+
+Balanced approach.

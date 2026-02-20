@@ -1,0 +1,29 @@
+title: Relations with France
+subtitle: Diplomatic ties with our northern neighbor.
+view-if: year >= 1931 and france_relation < 50
+new-page: true
+on-arrival: france_relation += 10
+tags: event
+
+= Relations with France
+
+France is a key ally. Strengthening ties could bring economic and political benefits.
+
+- @alliance: Seek closer alliance.
+- @neutral: Maintain neutrality.
+- @tension: Allow tensions to rise.
+
+@alliance
+on-arrival: france_relation += 20; international_support += 5
+
+Closer ties improve support.
+
+@neutral
+on-arrival: france_relation += 5
+
+Neutral approach.
+
+@tension
+on-arrival: france_relation -= 10; international_support -= 5
+
+Tensions harm relations.

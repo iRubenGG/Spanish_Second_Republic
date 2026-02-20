@@ -1,0 +1,17 @@
+title: The Death of Alcalá-Zamora
+subtitle: The first president of the Republic has died...
+new-page: true
+view-if: year = 1936 and month >= 7 and president != "Alcalá-Zamora"
+on-arrival: alcala_zamora_dead = 1
+max-visits: 1
+tags: event
+face-image: img/AlcalaZamora.jpg
+go-to: game_over
+
+= The Death of Alcalá-Zamora
+
+Niceto Alcalá-Zamora has passed away.
+
+The nation mourns the loss of its first president, a key figure in the establishment of the Republic. His moderate stance and commitment to democracy are remembered fondly by many.
+
+With his passing, the Republic faces uncertainty as tensions rise...
